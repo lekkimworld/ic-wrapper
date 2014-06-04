@@ -14,11 +14,12 @@ public class ExtracterServlet extends HttpServlet {
 	
 	// declarations
 	private String hostname = null;
+	private String title = null;
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
-		this.hostname = config.getInitParameter("hostname");
-		if (null != this.hostname && this.hostname.length() == 0) this.hostname = null;
+		this.hostname = this.getInitParamStr(config, "hostname", null);
+		this.title = this.getInitParamStr(config, "title", null);
 	}
 
 	/**
@@ -47,9 +48,17 @@ public class ExtracterServlet extends HttpServlet {
 		
 		// set hostname
 		if (null == this.hostname) {
-			e.setHostname(req.getRemoteAddr());
+			e.setHostname(req.getRemoteHost());
 		} else {
 			e.setHostname(this.hostname);
+		}
+		
+		// set title
+		String reqTitle = req.getParameter("title");
+		if (null != reqTitle) {
+			e.setTitle(reqTitle);
+		} else if (null != this.title) {
+			e.setTitle(this.title);
 		}
 		
 		try {
@@ -60,5 +69,10 @@ public class ExtracterServlet extends HttpServlet {
 			t.printStackTrace();
 		}
 	}
-
+	
+	private String getInitParamStr(ServletConfig config, String key, String defaultValue) {
+		String value = config.getInitParameter(key);
+		if (null == value || value.length() == 0) return defaultValue;
+		return value;
+	}
 }

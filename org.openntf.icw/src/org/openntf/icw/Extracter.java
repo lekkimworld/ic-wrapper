@@ -15,11 +15,17 @@ public class Extracter {
 	private String username = null;
 	private String password = null;
 	private String hostname = null;
+	private String title = null;
 	private String login = "/homepage/j_security_check";
 	private String template = "/search/web/jsp/advancedSearch.jsp";
 	
 	public Extracter setHostname(String h) {
 		this.hostname = h;
+		return this;
+	}
+	
+	public Extracter setTitle(String t) {
+		this.title = t;
 		return this;
 	}
 	
@@ -51,18 +57,24 @@ public class Extracter {
 			sb.append(line).append('\n');
 		}
 		
-		String[][] lookfor = new String[3][3];
-		lookfor[0][0] = "<div class=\"lotusTitleBar2\">";
-		lookfor[0][1] = "<div class=\"lotusMain\">";
-		lookfor[0][2] = "$$REPLACE_0$$";
-		lookfor[1][0] = "<div class=\"lotusColLeft\" role=\"complementary\">";
-		lookfor[1][1] = "<div class=\"lotusContent\" role=\"main\">";
-		lookfor[1][2] = "<iframe src=\"http://" + iframeurl + "\" height=\"800px\" width=\"100%\"></iframe>";
-		lookfor[2][0] = "<div class=\"lotusContent\" role=\"main\">";
-		lookfor[2][1] = "</table></div></div>";
-		lookfor[2][2] = "</div></div>";
+		int k=0;
+		String[][] lookfor = new String[10][3];
+		if (null != this.title) {
+			lookfor[k][0] = "<title>";
+			lookfor[k][1] = "</title>";
+			lookfor[k++][2] = "<title>" + this.title + "</title>";
+		}
+		lookfor[k][0] = "<div class=\"lotusTitleBar2\">";
+		lookfor[k][1] = "<div class=\"lotusMain\">";
+		lookfor[k++][2] = "$$REPLACE_0$$";
+		lookfor[k][0] = "<div class=\"lotusColLeft\" role=\"complementary\">";
+		lookfor[k][1] = "<div class=\"lotusContent\" role=\"main\">";
+		lookfor[k++][2] = "<iframe src=\"http://" + iframeurl + "\" height=\"800px\" width=\"100%\"></iframe>";
+		lookfor[k][0] = "<div class=\"lotusContent\" role=\"main\">";
+		lookfor[k][1] = "</table></div></div>";
+		lookfor[k++][2] = "</div></div>";
 		
-		for (int i=0; i<lookfor.length; i++) {
+		for (int i=0; i<k; i++) {
 			int idx1 = sb.indexOf(lookfor[i][0]);
 			int idx2 = sb.indexOf(lookfor[i][1], idx1);
 			if (idx2 <= idx1) continue;
