@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd" version="3.0">
+	<display-name>org.openntf.icw</display-name>
+	<servlet>
+		<description>
+		</description>
+		<display-name>Extracter Servlet</display-name>
+		<servlet-name>ExtracterServlet</servlet-name>
+		<servlet-class>org.openntf.icw.ExtracterServlet</servlet-class>
+		<enabled>true</enabled>
+		<async-supported>false</async-supported>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ExtracterServlet</servlet-name>
+		<url-pattern>/ExtracterServlet</url-pattern>
+	</servlet-mapping>
+	<security-constraint>
+    <web-resource-collection>
+      <web-resource-name>Protected Area</web-resource-name>
+      <url-pattern>/*</url-pattern>
+      <http-method>GET</http-method>
+    </web-resource-collection>
+    <auth-constraint>
+      <role-name>user</role-name>
+    </auth-constraint>
+  </security-constraint>
+  
+  <security-role>
+  	<role-name>user</role-name>
+  </security-role>
+</web-app>
