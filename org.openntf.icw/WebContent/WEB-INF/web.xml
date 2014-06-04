@@ -7,8 +7,14 @@
 		<display-name>Extracter Servlet</display-name>
 		<servlet-name>ExtracterServlet</servlet-name>
 		<servlet-class>org.openntf.icw.ExtracterServlet</servlet-class>
-		<enabled>true</enabled>
-		<async-supported>false</async-supported>
+		<init-param>
+			<param-name>hostname</param-name>
+			<param-value>IBM Connections hostname</param-value>
+		</init-param>
+		<init-param>
+			<param-name>title</param-name>
+			<param-value>Page title</param-value>
+		</init-param>
 	</servlet>
 	<servlet-mapping>
 		<servlet-name>ExtracterServlet</servlet-name>

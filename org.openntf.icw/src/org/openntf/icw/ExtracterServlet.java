@@ -47,11 +47,7 @@ public class ExtracterServlet extends HttpServlet {
 		PrintWriter pwResp = resp.getWriter();
 		
 		// set hostname
-		if (null == this.hostname) {
-			e.setHostname(req.getRemoteHost());
-		} else {
-			e.setHostname(this.hostname);
-		}
+		e.setHostname(this.hostname);
 		
 		// set title
 		String reqTitle = req.getParameter("title");

@@ -66,10 +66,10 @@ public class Extracter {
 		}
 		lookfor[k][0] = "<div class=\"lotusTitleBar2\">";
 		lookfor[k][1] = "<div class=\"lotusMain\">";
-		lookfor[k++][2] = "$$REPLACE_0$$";
+		lookfor[k++][2] = null;
 		lookfor[k][0] = "<div class=\"lotusColLeft\" role=\"complementary\">";
 		lookfor[k][1] = "<div class=\"lotusContent\" role=\"main\">";
-		lookfor[k++][2] = "<iframe src=\"http://" + iframeurl + "\" height=\"800px\" width=\"100%\"></iframe>";
+		lookfor[k++][2] = "<iframe id=\"icw_iframe\" src=\"http://" + iframeurl + "\" height=\"400px\" width=\"100%\" border=\"0\"></iframe>";
 		lookfor[k][0] = "<div class=\"lotusContent\" role=\"main\">";
 		lookfor[k][1] = "</table></div></div>";
 		lookfor[k++][2] = "</div></div>";
