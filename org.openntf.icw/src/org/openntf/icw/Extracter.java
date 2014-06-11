@@ -16,6 +16,7 @@ public class Extracter {
 	private String password = null;
 	private String hostname = null;
 	private String title = null;
+	private int height = 20000;
 	private String login = "/homepage/j_security_check";
 	private String template = "/search/web/jsp/advancedSearch.jsp";
 	
@@ -26,6 +27,11 @@ public class Extracter {
 	
 	public Extracter setTitle(String t) {
 		this.title = t;
+		return this;
+	}
+	
+	public Extracter setHeight(int height) {
+		this.height = height;
 		return this;
 	}
 	
@@ -69,7 +75,7 @@ public class Extracter {
 		lookfor[k++][2] = null;
 		lookfor[k][0] = "<div class=\"lotusColLeft\" role=\"complementary\">";
 		lookfor[k][1] = "<div class=\"lotusContent\" role=\"main\">";
-		lookfor[k++][2] = "<iframe id=\"icw_iframe\" src=\"http://" + iframeurl + "\" height=\"400px\" width=\"100%\" border=\"0\"></iframe>";
+		lookfor[k++][2] = "<iframe id=\"icw_iframe\" src=\"http://" + iframeurl + "\" height=\"" + this.height + "px\" width=\"100%\" style=\"border: 0\" border=\"0\"></iframe>";
 		lookfor[k][0] = "<div class=\"lotusContent\" role=\"main\">";
 		lookfor[k][1] = "</table></div></div>";
 		lookfor[k++][2] = "</div></div>";

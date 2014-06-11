@@ -50,6 +50,16 @@ public class ExtracterServlet extends HttpServlet {
 		e.setHostname(this.hostname);
 		
 		// set title
+		int reqHeight = -1;
+		try {
+			reqHeight = Integer.parseInt(req.getParameter("height"));
+		} catch (Throwable t) {}
+		if (reqHeight < 50) {
+			reqHeight = 20000;
+		}
+		e.setHeight(reqHeight);
+		
+		// set title
 		String reqTitle = req.getParameter("title");
 		if (null != reqTitle) {
 			e.setTitle(reqTitle);
