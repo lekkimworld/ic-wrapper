@@ -15,11 +15,13 @@ public class ExtracterServlet extends HttpServlet {
 	// declarations
 	private String hostname = null;
 	private String title = null;
+	private String https = null;
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		this.hostname = this.getInitParamStr(config, "hostname", null);
 		this.title = this.getInitParamStr(config, "title", null);
+		this.https = this.getInitParamStr(config, "https", null);
 	}
 
 	/**
@@ -44,12 +46,13 @@ public class ExtracterServlet extends HttpServlet {
 		}
 		
 		// get response writer
+		resp.setContentType("text/html; charset=UTF-8");
 		PrintWriter pwResp = resp.getWriter();
 		
 		// set hostname
 		e.setHostname(this.hostname);
 		
-		// set title
+		// get height
 		int reqHeight = -1;
 		try {
 			reqHeight = Integer.parseInt(req.getParameter("height"));
@@ -58,6 +61,17 @@ public class ExtracterServlet extends HttpServlet {
 			reqHeight = 20000;
 		}
 		e.setHeight(reqHeight);
+		
+		// get https
+		boolean reqHttps = false;
+		if (null == this.https) {
+			// read from request
+			reqHttps = req.isSecure();
+		} else {
+			char c = this.https.charAt(0);
+			reqHttps = (c=='t' || c=='T' || c=='1');
+		}
+		e.setHttps(reqHttps);
 		
 		// set title
 		String reqTitle = req.getParameter("title");
