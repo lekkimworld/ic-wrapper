@@ -5,6 +5,7 @@ import java.io.PrintWriter;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -16,12 +17,14 @@ public class ExtracterServlet extends HttpServlet {
 	private String hostname = null;
 	private String title = null;
 	private String https = null;
+	private String langDefault = null;
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		this.hostname = this.getInitParamStr(config, "hostname", null);
 		this.title = this.getInitParamStr(config, "title", null);
 		this.https = this.getInitParamStr(config, "https", null);
+		this.langDefault = this.getInitParamStr(config, "lang", "en_us");
 	}
 
 	/**
@@ -80,6 +83,24 @@ public class ExtracterServlet extends HttpServlet {
 		} else if (null != this.title) {
 			e.setTitle(this.title);
 		}
+		
+		// set title
+		String reqLang = req.getParameter("lang");
+		if (null == reqLang || reqLang.length() == 0) {
+			for (Cookie cookie : req.getCookies()) {
+				if (cookie.getName().equalsIgnoreCase("lcLang")) {
+					reqLang = cookie.getValue();
+					break;
+				}
+			}
+			if (null == reqLang || reqLang.length() == 0) {
+				reqLang = this.langDefault;
+			}
+		} else {
+			// language is set in url - set cookie
+			resp.addCookie(new Cookie("lcLang", reqLang));
+		}
+		e.setLanguage(reqLang);
 		
 		try {
 			String result = e.extract(req.getParameter("url"));

@@ -15,6 +15,7 @@ public class Extracter {
 	private String username = null;
 	private String password = null;
 	private String hostname = null;
+	private String lang = null;
 	private boolean https = false;
 	private String title = null;
 	private int height = 20000;
@@ -28,6 +29,11 @@ public class Extracter {
 	
 	public Extracter setTitle(String t) {
 		this.title = t;
+		return this;
+	}
+	
+	public Extracter setLanguage(String t) {
+		this.lang = t;
 		return this;
 	}
 	
@@ -58,13 +64,13 @@ public class Extracter {
 	}
 	
 	public String extract(String iframeurl) throws Exception {
-		URL url = new URL("https://" + this.hostname + this.template);
+		URL url = new URL("https://" + this.hostname + this.template + "?lang=" + this.lang);
 		HttpURLConnection con = this.ensureLtpaToken((HttpURLConnection)url.openConnection());
 		
 		StringBuilder sb = new StringBuilder();
 		String line = null;
 		
-		BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream()));
+		BufferedReader r = new BufferedReader(new InputStreamReader(con.getInputStream(), Charset.forName("UTF-8")));
 		while (null != (line=r.readLine())) {
 			sb.append(line).append('\n');
 		}
