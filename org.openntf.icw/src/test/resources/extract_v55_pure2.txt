@@ -1,0 +1,257 @@
+</div></div> 
+ 
+ 
+
+<script type="text/javascript">
+var ibmConfig = {
+   serviceName: "search",
+   proxyURL: "/search/ajaxProxy/",
+   contextRootEnabler: "/search",
+   versionStamp: "20160314.102606"
+};
+var baseProtocol = "http";
+var baseHost = "inside.intravision.dk";
+var basePath = "/connections/resources";
+var needProxy = (baseHost != window.location.host || baseProtocol+":" != window.location.protocol);
+var dojoConfig = djConfig = {
+   async: true,
+   isDebug: false,
+   baseUrl: (needProxy ? (ibmConfig.proxyURL + encodeURIComponent(baseProtocol) + "/" + encodeURIComponent(baseHost)) : (baseProtocol + "://" + baseHost)) + basePath + "/web/dojo/",
+   locale: "en",
+   dojoBlankHtmlUrl: "/search/static/20160314.102606/nav/blankIE.html",
+   blankGif: "http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606",
+   useCommentedJson: true,  
+   proxy: "/search/ajaxProxy",
+   localizationComplete: true
+};
+</script>
+<script type="text/javascript">
+var netJazzAjaxConfig = {
+    base: "http://inside.intravision.dk/connections/resources",
+    skipStyles: true,
+    params: "etag=20160314.102606&lang=en"
+};
+CKEDITOR_BASEPATH = window.CKEDITOR_BASEPATH || "http://inside.intravision.dk/connections/resources/web/com.ibm.oneui.ckeditor/editor/"; 
+</script>
+<script type="text/javascript">
+var gatekeeperConfig = {"contacts-group-member-grouponly":false,"files-tree-dnd":false,"news-read-status-enabled":true,"fileviewer-panels":true,"ckeditor-lite-mentions":true,"files-enable-public-folders-view-for-nested-folder":false,"sharepoint_iframe_widget":false,"community-aware-access-denied":false,"fileviewer-everywhere-activitystream":true,"fileviewer-detailspage":true,"fileviewer-panels-textnav":true,"files-tree-dnd-accepts-folders":false,"wikis-rich-content-widget":true,"visitor-model-support-for-org":false,"search-visitor-model-content-filtering-suport":false,"fileviewer-welcome":false,"event-tracker-metrics-via-event-tracker-only":true,"contacts-group-peoplepicker":false,"activity-recentupdate-leftnavigation":true,"search-dr-validation-enabled":false,"wikis-enable-used-page-title":false,"files-personal-dnd-upload-indicator":true,"files-nested-folder":true,"files-enable-file-zip-download":true,"files-enable-folder-zip-download-for-nested-folder":false,"communities-move-community":true,"json-widget-metadata":true,"highway-distributed-file-system-support":false,"files-enable-recent-people-link":false,"news-push-service":true,"search-global-search-restyle":true,"hikari-default-theme":true,"contacts-group-nested":false,"fileviewer-preview-videojs":true,"files-left-navigation-pinned-expandable":false,"org-visitor-model-transition":false,"fileviewer-ir-error":false,"fileviewer-ccm-preview":true,"files-add-to-sync-in-listview":true,"activities-block-community":true,"files-tree-dnd-accepts-files":false,"fileviewer-everywhere":true,"files-enable-custom-view":true,"contacts-group-hierarchical":false,"fileviewer-theme-light":false,"fileviewer-panels-resize":true,"fileviewer-history":true,"files-independent-scrollbars":true,"calendar-export-ical-file":true,"files-left-navigation-sharefolder-expandable":false,"search-history-view-ui":false,"widget-catalog-scee-impl":false,"forums-forum-search-attachment":true,"fileviewer-close-on-edit":false,"communities-list-restricted":true,"files-tree-dnd-source":false,"communities-tabbed-nav":false,"ie-native-mode":true,"media-gallery":false,"files-enable-shared-by-me-view-for-nested-folder":false,"event-tracker-service":true,"files-new-banner-in-sync-view":true,"fileviewer-thumbnail":false,"fileviewer-preview-text":false,"files-picker-dnd":true,"contacts-sync-with-notes":false,"ui-language-setting":false,"contacts-group-info":false,"filesync-push-service":false,"files-grant-file-edit-permission-to-folder-editor-only":true,"fileviewer-ir-autopublish":true,"ckeditor-lite-mentions-ee":true,"notification-center-live-updates":true};
+</script>
+<script type="text/javascript">djConfig.parseOnLoad=true;
+</script>
+<script type="text/javascript" src="http://inside.intravision.dk/connections/resources/web/_js/?include=dojo.main~&etag=20160314.102606&_proxyURL=http%3A%2F%2Finside.intravision.dk%2Fconnections%2Fresources&ss=20160314.102606&lang=en&country=&variant="></script>
+<script type="text/javascript" src="http://inside.intravision.dk/connections/resources/web/_js/?include=lconn.core.bundle_common~&etag=20160314.102606&exclude=dojo.main~&_proxyURL=http%3A%2F%2Finside.intravision.dk%2Fconnections%2Fresources&ss=20160314.102606&lang=en&country=&variant="></script>
+<script type="text/javascript" src="http://inside.intravision.dk/connections/resources/web/_js/?include=lconn.search.searchApp~&etag=20160314.102606&exclude=dojo.main~lconn.core.bundle_common~&_proxyURL=http%3A%2F%2Finside.intravision.dk%2Fconnections%2Fresources&ss=20160314.102606&lang=en&country=&variant="></script>
+<script type="text/javascript">var openHelpWindow=function(){
+lconn.core.help.launchHelp();
+};
+var openDemoWindow=function(url, /*unused*/width, /*unused*/height) {
+lconn.core.help.launchDemo(url);
+}
+dojo.addOnLoad(function() {
+lconn.core.auth.setAuthCheck(function() { return true; });
+var headerHelpLink=dojo.byId("headerHelpLink");
+if (headerHelpLink){
+dojo.attr(headerHelpLink, "href", "javascript:;");
+dojo.connect(headerHelpLink, "onclick", openHelpWindow);
+}
+/* The logout action is set up in the addOnLoad function so that
+we are guaranteed the authentication JS objects are available. */
+var logoutLink=dojo.byId('logoutLink');
+if (logoutLink) {
+dojo.connect(logoutLink, "onclick", function() {
+var authenticated=lconn.core.auth.isAuthenticated();
+if (authenticated) {
+lconn.core.auth.logout();
+} else {
+lconn.core.auth.login();
+}
+return false;
+});
+}
+});
+</script>
+ 
+<script type="text/javascript">dojo.addOnLoad(function() {
+var bodyElem=document.getElementsByTagName("body")[0];
+if (dojo.hasClass(bodyElem, "dijit_a11y")) {
+dojo.addClass(bodyElem, "lotusImagesOff");
+}
+lconn.search.auth.formBasedUtility.init("/search",null);
+var pTA=dijit.byId("peopleCatcher");
+if(pTA!=null) {
+dojo.connect(pTA, "_handleOnChange", function () {
+var pTATarget=dojo.byId("realPerson");
+var itemSet=pTA.getItem();
+if(itemSet!=null) {
+if(pTATarget!=null) {
+pTATarget.value=itemSet.param;
+if(typeof(itemSet.userid)=="undefined" || itemSet.userid==null){
+pTATarget.value="";
+}
+}
+} else {
+return false;
+}
+});
+dojo.connect(pTA, "onSelect", function() {
+var pTA=dijit.byId("peopleCatcher");
+var pTATarget=dojo.byId("realPerson");
+if(pTATarget.value==""){
+pTA.reset();
+}
+});
+dojo.attr("peopleCatcher", {"aria-describedby":"peopleCatcher_desc"});
+} else {
+var bhcTypeAhead=dojo.byId("bhc_PeopleTypeAhead_0");
+if (bhcTypeAhead) {
+dojo.attr(bhcTypeAhead, {"aria-describedby":"peopleCatcher_desc"});
+}
+}
+dojo.attr("advancedQuery", {"aria-describedby":"advancedQuery_desc"});
+dojo.attr("tagCatcher", {"aria-describedby":"tagCatcher_desc"});
+dojo.attr("titleQuery", {"aria-describedby":"titleQuery_desc"});
+dojo.query("div.lotusMessage2 a.lotusDelete").connect("onclick", function(){
+dojo.style(this.parentNode,"display","none");
+});
+});
+function setPersonIdForQuery(bhcTypeAheadWidget) {
+var personId=bhcTypeAheadWidget.store.getValue(bhcTypeAheadWidget.item, "i", "u_");
+personId=personId.substring(2);
+dojo.attr("realPerson", "value", personId);
+}
+function setAllChecked(/*string*/domNodeId, /*boolean*/isSelectAll){
+var domNode=dojo.byId(domNodeId);
+var checkboxes=dojo.query("input.searchCheckBoxes",domNode);
+dojo.forEach(checkboxes, function(theCheckBox){
+if ((isSelectAll && !theCheckBox.checked) || (!isSelectAll && theCheckBox.checked))
+theCheckBox.click();	
+}, this);
+}
+function validateForm(formElement) {
+function whitespaceonly(/*string*/inputValue) {
+if(!inputValue) {return true;}
+var trimmed=dojo.trim(inputValue);
+return trimmed.length === 0;
+}
+dojo.query("div.lotusMessage2").style("display","none");
+var aSearch=document.advancedSearchForm1.advancedQuery;
+var tSearch=document.advancedSearchForm1.titleQuery;
+var tCatcher=document.advancedSearchForm1.tag;
+var rPerson=document.advancedSearchForm1.person;
+var checkBoxes=dojo.query("input.searchCheckBoxes",dojo.byId("filterComponents"));
+var passed=true;
+if((!aSearch || whitespaceonly(aSearch.value))
+&& (!tCatcher || whitespaceonly(tCatcher.value))
+&& (!rPerson || whitespaceonly(rPerson.value))
+&& (!tSearch || whitespaceonly(tSearch.value))) {
+passed=false;
+dojo.style("lconnSearchMsgErrorEmptyQuery","display","");
+return false;
+}
+var limitString="";
+var tofilter=false;
+var count=0;
+var item;
+var sourceValues=[];
+dojo.forEach(checkBoxes, function(item){
+if(dojo.attr(item, "checked")===true) {
+count++;
+limitString=dojo.attr(item, "value");
+sourceValues.push("Source/"+dojo.attr(item,"value"));
+} else {
+tofilter=true;
+}
+}, this);
+if(count===1) {
+tofilter=false;
+dojo.attr("componentScope", "value", limitString);
+} else if (count===0){
+passed=false;
+dojo.style("lconnSearchMsgErrorNoScope","display","");
+return false;
+}
+if(tofilter===true) {
+var sourceConstraint={
+type: "category",
+values: sourceValues
+};
+dojo.attr("sourceConstraint", "value", dojo.toJson(sourceConstraint));
+}
+if (rPerson && !whitespaceonly(rPerson.value)){
+var personConstraint={
+type: "category",
+values: ["Person/"+encodeURIComponent(rPerson.value)]
+};
+dojo.attr("personConstraint", "value", dojo.toJson(personConstraint));
+dojo.attr(rPerson, "value", "");
+dojo.attr("peopleCatcher", "value", ""); 
+}
+if (tCatcher && !whitespaceonly(tCatcher.value)){
+var tag=tCatcher.value;
+tag=dojo.trim(tag.toLowerCase());
+var tagConstraint;
+if (tag.indexOf("*")!==-1){
+tagConstraint={
+type: "field",
+id: "tag",
+values: [tag],
+exactMatch: false
+};
+} else {
+tagConstraint={
+type: "category",
+values: ["Tag/"+tag]
+};
+}
+dojo.attr("tagConstraint", "value", dojo.toJson(tagConstraint));
+dojo.attr("tagCatcher", "value", "");
+}
+if(tSearch && !whitespaceonly(tSearch.value)) {
+var fieldConstraint={
+type: "field",
+id: "title",
+values: [tSearch.value],
+exactMatch: false
+};
+dojo.attr("titleConstraint", "value", dojo.toJson(fieldConstraint));
+dojo.attr("titleQuery", "value", "");
+}
+if (passed){
+var emptyInputs=dojo.query('input[value=""]', formElement);
+emptyInputs.attr("disabled",true);
+dojo.attr("titleQuery", "disabled", true);
+}
+return passed;
+}
+</script> 
+ 
+
+
+ 
+<div id="lotusFooter" class="lotusFooter" role="contentinfo"><ul><li><a href="http://inside.intravision.dk/homepage/">Home</a></li><li><a href="javascript:;" onclick="javascript:openHelpWindow(); return false;" class="">Help</a></li><li><a href="http://www-10.lotus.com/ldd/lcforum.nsf">IBM Support Forums</a></li> <li><a href="/search/web/jsp/toolsHomepage.jsp" class="">Bookmarking Tools</a></li><li id="lotusBannerFooterMetrics" style="display:none"><a class="lotusMetricsReaderLink" href="http://inside.intravision.dk/metrics/">Server Metrics</a></li><li id="lconnFooterMobile" class="lotusHidden"><a id="lconnMobileRedirectLink" href="javascript:;">Mobile UI</a></li><li><a href="http://www-306.ibm.com/software/lotus/products/connections/">IBM Connections on ibm.com</a></li><li><a href="http://www.lotus.com/ldd/doc/cct/nextgen.nsf/feedback_choice?OpenForm&amp;Context=footer+ventura+NoTitle+4.5">Submit Feedback</a></li></ul><script type="text/javascript">
+(function(){
+   function loadConnectionsLanguageSelector() {
+      try {
+         dojo.require("lconn.core.header");
+         lconn.core.header.enableLanguageSelector("languageSelectorText", {"da":"Dansk","en":"English","de":"Deutsch","ja":"\u65e5\u672c\u8a9e","zh":"\u4e2d\u6587 (\u200f\u7b80\u4f53)","fr":"Fran\u00e7ais","ar":"\u200f\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u200f"},
+            "lcLang", "", -1);
+      } catch (e) {
+         console.error(e);
+      }
+   }
+   if (dojo.exists("lconn.core.header") && !dojo.exists("_skipConnectionsLanguageSelector"))
+      dojo.addOnLoad(loadConnectionsLanguageSelector);
+})();
+</script><script type="text/javascript">
+      dojo.require("lconn.core.header.apps");
+      dojo.require("lconn.core.auth");
+
+    </script><script type="text/javascript">
+         dojo.addOnLoad(function(){
+            lconn.core.header.apps.updateLoginRegion();
+            lconn.core.header.apps.updateBannerByRoles();
+         });
+       </script>
+</div>
+ 
+</div></body></html>

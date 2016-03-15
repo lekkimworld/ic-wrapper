@@ -1,0 +1,102 @@
+</title> 
+<script type="text/javascript">/*
+* Global JS variable to represent the current logged user
+*/
+var lconnCurrentUser={
+id: "1FCAA008-88CE-8447-C125-734C0035C155",
+displayName: "Mikkel Flindt Heisterberg",
+email: "mfh@intravision.dk",
+isExternal: false 
+};
+</script></head><body dir="ltr" class="lotusui lotusui30dojo lotusui30_body lotusui30_fonts lotusui30 lotusSpritesOn"><div class="lotusui30_layout lotusFrame"> 
+ 
+ 
+
+ 
+ 
+<div role="banner"><div id="lotusBanner" class="lotusBanner"><script type="text/javascript">
+if (self != top) {
+   try {
+      // Reset location if in different host.
+      // per Same Origin Policy, try to get top location attributes,
+      // will get permission denied if in different origin.
+      if (self.location.hostname != top.location.hostname)
+         top.location=self.location;
+   }catch(e){
+      // reset location if in different origin
+      top.location=self.location;
+   }
+}
+</script>
+<div class="lotusRightCorner">
+   <div class="lotusInner"><div class="lotusLogo" id="lotusLogo"><span class="lotusAltText">INside551</span></div>
+	<ul class="lotusInlinelist lotusLinks" aria-label="Connections"><li id="lotusBannerHomepage" class="lotusFirst "><a href="http://inside.intravision.dk/homepage/" title="Home" aria-label="Home"><img alt="" role="presentation" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lconnBannerIcon lconnSprite lconnSprite-iconHomeBlue16"><span id="lconnBannerHomepageLabel">Home</span></a></li><li id="lotusBannerProfiles" class=" "><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-people"
+                      aria-label="Profiles" 
+                      src="/search/static/20160314.102606!en/nav/templates/menu/people.jsp"
+                      href="http://inside.intravision.dk/profiles/"
+                      errormessage="Profiles is not available"><img alt="" role="presentation" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lconnBannerIcon lconnSprite lconnSprite-iconProfilesBlue16">Profiles <img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerCommunities" class=" "><a id="lotusBannerCommunitiesLink" 
+                      onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-communities"
+                      aria-label="Communities" 
+                      src="/search/static/20160314.102606!en/nav/templates/menu/communities.jsp?authenticated=true"
+                      href="http://inside.intravision.dk/communities/"
+                      errormessage="Communities is not available"><img alt="" role="presentation" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lconnBannerIcon lconnSprite lconnSprite-iconCommunitiesBlue16">Communities <img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerApps" class=" lotusSelected"><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                   onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                   onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                   role="button" 
+                   _lconn_menuid="lconnheadermenu-apps"
+                   aria-label="Apps" 
+                   src="/search/static/20160314.102606!en/nav/templates/menu/apps.jsp"
+                   href="javascript:;"
+                   errormessage="Search is not available">Apps <img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerHeaderMetrics" style="display:none" class=""><a href="http://inside.intravision.dk/metrics/">Metrics</a></li><li id="lotusBannerModeration" style="display:none" class=""><a href="http://inside.intravision.dk/moderation/">Moderation</a></li><script type="text/javascript" src="/kudosboards/resources/js/app/activities-header-injection.js" charset="utf-8"></script><script type="text/javascript" charset="utf-8">boardsHeaderInjector.data.VIEW_AS_BOARD = "View Activity as Board"</script><style type="text/css">.lotusui30 div.lotusPlaceBar h2{width:auto !important;}</style></ul>
+      <ul class="lotusInlinelist lotusUtility lotusNowrap" id="headerMenuContainer"><li class="lotusFirst"><div id="lotusSearchButton"></div></li><li id="lotusBannerNotifications"><a id="notificationCenterNode"         	 			  
+        			  	  onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);"
+        	              onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);"
+        	              onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);"
+                          role="button"                           
+                          aria-label="Notifications"
+                          src="/search/static/20160314.102606!en/nav/templates/menu/notifications.jsp"
+                          _lconn_menuid="lconnheadermenu-notifications"                                                                             
+                          href="javascript:;"><img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lconnSprite iconsComponents16-Notifications" /><span class="lotusAltText">Notifications</span></a></li><li class="" id="lotusPerson"><span id="logoutLabel" aria-label="Log in / log out"><a class="lotusUser" id="headerUserName"
+                      onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);"
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);"
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);"
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-user"
+                      aria-label="Current user Mikkel Flindt Heisterberg"
+                      src="/search/static/20160314.102606!en/nav/templates/menu/user.jsp?appName=search&username=Mikkel+Flindt+Heisterberg&userid=1FCAA008-88CE-8447-C125-734C0035C155"
+                      href="javascript:;"><img class="usersRadius" alt="Mikkel Flindt Heisterberg" src="http://inside.intravision.dk/profiles/photo.do?userid=1FCAA008-88CE-8447-C125-734C0035C155&small=true" width=26 height=26></img> <img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></span></li><li id="logoutLi" class="lotusHidden" style="display:none"><span id="loginLabel" role="region" aria-label="Log in / log out"><a id="logoutLink" href="javascript:;" >Log Out</a></span></li><li class="shareboxLi" id="headerSharebox" ><a class="lotusBannerBtn" href="javascript:;" onclick="dojo.stopEvent(event);dojo.require('net.jazz.ajax.xdloader');net.jazz.ajax.xdloader.load_async('com.ibm.social.sharebox.dialog', dojo.hitch(this, function() {com.ibm.social.sharebox.show();}));" role="button">Share</a></li><li id="languageSelectorText" style="display: none;"></li><li id="lotusBannerMail" class=" " style="display: none;" external-content-style="height:auto"><a onmouseover="dojo.require('com.ibm.lconn.socialmail.gadget.NavigationHandler');
+                                       (new com.ibm.lconn.socialmail.gadget.NavigationHandler()).navigateInbox(this, event);"
+                          onclick="dojo.require('com.ibm.lconn.socialmail.gadget.NavigationHandler');
+                                       (new com.ibm.lconn.socialmail.gadget.NavigationHandler()).navigateInbox(this, event);"
+                          onfocus="dojo.require('com.ibm.lconn.socialmail.gadget.NavigationHandler');
+                                       (new com.ibm.lconn.socialmail.gadget.NavigationHandler()).navigateInbox(this, event);" 
+                          role="button" 
+                          _lconn_menuid="lconnheadermenu-mail"
+                          aria-label="Mail" 
+                          src="/search/static/20160314.102606!en/nav/templates/menu/mail.jsp"
+                          href="javascript:;"
+                          errormessage="Mail cannot be reached at this time"><img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="lconnSprite lconnSprite-iconMailWhite16" /><span class="lotusAltText">Mail</span><span class="os-site-mail-notify"></span></a></li><li id="lotusBannerCalendar" class=" " style="display: none;" external-content-style="height:auto"><a onmouseover="dojo.require('com.ibm.lconn.socialmail.gadget.NavigationHandler');
+                                      (new com.ibm.lconn.socialmail.gadget.NavigationHandler()).navigateCalendar(this, event);" 
+                          onclick="dojo.require('com.ibm.lconn.socialmail.gadget.NavigationHandler');
+                                      (new com.ibm.lconn.socialmail.gadget.NavigationHandler()).navigateCalendar(this, event);" 
+                          onfocus="dojo.require('com.ibm.lconn.socialmail.gadget.NavigationHandler');
+                                      (new com.ibm.lconn.socialmail.gadget.NavigationHandler()).navigateCalendar(this, event);" 
+                          role="button" 
+                          _lconn_menuid="lconnheadermenu-calendar"
+                          aria-label="Calendar" 
+                          src="/search/static/20160314.102606!en/nav/templates/menu/calendar.jsp"
+                          href="javascript:;"
+                          errormessage="Calendar cannot be reached at this time"><img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="iconsComponentsWhite16 iconsComponentsWhite16-CalendarWhite16" /><span class="lotusAltText">Calendar</span></a></li><li id="headerHelpLi" ><a role="button" aria-label="Open help window" href="#help" id="headerHelpLink"><img role="presentation" alt="" src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" class="iconsOther16 iconsOther16-bannerHelpNormal16" /><span class="lotusAltText">?</span></a></li><li><span class="lotusBranding"><img src="http://inside.intravision.dk/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160314.102606" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span></li></ul>
+      <div class="lotusClear"><!-- IE --></div></div></div>
+</div></div>
+ 
+ 
+<div class="lotusMain">

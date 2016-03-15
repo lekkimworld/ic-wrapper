@@ -29,10 +29,10 @@ public class Extracter_v50 extends AbstractExtracter {
 		String[] result1 = this.extractBetween(data.toString(), "<title>", "</title>", false, false);
 		
 		// remove search title bar
-		result1[1] = this.replaceFrom(result1[1], "<div class=\"lotusTitleBar2\">", "</div><div class=\"lotusMain\">", "");
+		result1[1] = this.replaceBetween(result1[1], "<div class=\"lotusTitleBar2\">", "</div><div class=\"lotusMain\">", "");
 		
 		// remove left column
-		result1[1] = this.replaceFrom(result1[1], "<div class=\"lotusColLeft\"", "<div class=\"lotusContent\"", "");
+		result1[1] = this.replaceBetween(result1[1], "<div class=\"lotusColLeft\"", "<div class=\"lotusContent\"", "");
 		
 		// remove body
 		String[] result2 = this.extractBetween(result1[1], "<div class=\"lotusContent\" role=\"main\">", "</table></div></div>", false, false);

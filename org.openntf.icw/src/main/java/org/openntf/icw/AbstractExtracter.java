@@ -28,7 +28,7 @@ public abstract class AbstractExtracter {
 	 */
 	public static AbstractExtracter getExtractor(Context ctx) throws Exception {
 		String url = MessageFormat.format(IConstants.TEMPLATE_ABOUTVIEW, ctx.hostname, ctx.contextHomepage);
-		URL loader = new URL(ctx);
+		URL loader = ctx.getURL();
 		
 		CharSequence c = loader.GET(url, true);
 		String body = c.toString();
@@ -47,26 +47,11 @@ public abstract class AbstractExtracter {
 		return null;
 	}
 	
-	public static void main(String[] args) {
-		Context ctx = new Context();
-		ctx.setHostname("inside.intravision.dk");
-		ctx.setCredentials("mh", "jun06cloud");
-			
-		try {
-			AbstractExtracter e = AbstractExtracter.getExtractor(ctx);
-			System.out.println(ctx.releaseString);
-			
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
-	}
-	
 	public AbstractExtracter(Context ctx) {
 		this.ctx = ctx;
 	}
 	
-	protected String replaceFrom(String data, String start, String end, String replace) {
+	protected String replaceBetween(String data, String start, String end, String replace) {
 		return this.replaceBetween(data, start, end, replace, false);
 	}
 	
@@ -76,7 +61,7 @@ public abstract class AbstractExtracter {
 		int idx2 = data.indexOf(end, idx1 + start.length());
 		if (idx2 < 0) return null;
 		
-		return data.substring(0, idx1 + (excludeStart ? 0 : start.length()));
+		return data.substring(0, idx1 + (excludeStart ? start.length() : 0)) + data.substring(idx2);
 	}
 	
 	protected String[] extractBetween(String data, String start, String end, boolean excludeStart, boolean excludeEnd) {

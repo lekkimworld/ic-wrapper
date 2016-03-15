@@ -14,6 +14,7 @@ public class Context implements Serializable {
 	private static final long serialVersionUID = 2023121277727033638L;
 	
 	// declarations
+	private IURLFactory factory = null;
 	protected String contextHomepage = IConstants.CONTEXT_HOMEPAGE;
 	protected String title = "IBM Connections Extractor";
 	protected String releaseString = null;
@@ -22,7 +23,6 @@ public class Context implements Serializable {
 	protected String username = null;
 	protected String password = null;
 	protected boolean secure = true;
-	
 	protected String ltpatoken = null;
 	protected String tokenName = IConstants.TOKENNAME_LTPATOKEN2;
 	protected Proxy proxy = Proxy.NO_PROXY;
@@ -30,6 +30,10 @@ public class Context implements Serializable {
 	public Context setReleaseString(String release) {
 		this.releaseString = release;
 		return this;
+	}
+	
+	public String getReleaseString() {
+		return this.releaseString;
 	}
 	
 	public Context setHostname(String hostname) {
@@ -82,6 +86,19 @@ public class Context implements Serializable {
 		return (this.ltpatoken != null);
 	}
 	
+	public Context setURLFactory(IURLFactory factory) {
+		this.factory = factory;
+		return this;
+	}
+	
+	public org.openntf.icw.URL getURL() {
+		if (null == this.factory) {
+			return new org.openntf.icw.URL(this);
+		} else {
+			return this.factory.getURL(this);
+		}
+	}
+	
 	public HttpURLConnection ensureLtpaToken(HttpURLConnection con) throws Exception {
 		// set token if we already have it
 		if (this.hasLtpaToken()) {
@@ -119,5 +136,9 @@ public class Context implements Serializable {
 		
 		// recurse
 		return this.ensureLtpaToken(con);
+	}
+	
+	public interface IURLFactory {
+		public org.openntf.icw.URL getURL(Context ctx);
 	}
 }

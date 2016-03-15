@@ -1,0 +1,48 @@
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" ><head> 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<link rel="shortcut icon" href="http://inside.intravision.dk/connections/resources/web/com.ibm.oneui3.styles/imageLibrary/Branding/Other/ConnectionsBlue16.ico?etag=20160314.102606" type="image/x-icon">
+<!-- Copyright IBM Corp. 2016  All Rights Reserved.                    -->
+<link rel="search" type="application/opensearchdescription+xml" title="Connections" href="/search/opensearch.jsp"> 
+ 
+<!-- Copyright IBM Corp. 2016  All Rights Reserved.                    -->
+
+<!--[if IE 6]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie6";</script><![endif]-->
+<!--[if IE 7]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie7";</script><![endif]-->
+<!--[if IE 8]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie8";</script><![endif]-->
+<!--[if IE 9]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie9";</script><![endif]-->
+<link rel="stylesheet" type="text/css" id="lotusBaseStylesheet" href="http://inside.intravision.dk/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/base/package3.css&etag=20160314.102606" appName="search" base="http://inside.intravision.dk/connections/resources/web/" query="?version=oneui3&rtl=false&etag=20160314.102606" theme="hikari" defaultTheme="hikari" oneui="3"></link>
+<link rel="stylesheet" type="text/css" id="lotusSpritesStylesheet" href="http://inside.intravision.dk/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/sprites.css&etag=20160314.102606"></link>
+<link rel="stylesheet" type="text/css" id="lotusThemeStylesheet" href="http://inside.intravision.dk/connections/resources/web/_lconntheme/hikari.css?version=oneui3&rtl=false&etag=20160314.102606"></link>
+<!-- Copyright IBM Corp. 2016  All Rights Reserved.                    -->
+
+<link rel="stylesheet" type="text/css" id="lotusAppStylesheet" href="http://inside.intravision.dk/connections/resources/web/_lconnappstyles/hikari/search.css?version=oneui3&rtl=false&etag=20160314.102606"></link>
+<!-- Copyright IBM Corp. 2016  All Rights Reserved.                    -->
+<!-- Copyright IBM Corp. 2016  All Rights Reserved.                    -->
+
+<!-- IBM Connections Mobile App for iOS -->
+<meta content="app-id=450533489" name="apple-itunes-app" />
+<!-- IBM Connections Mobile App for Android -->
+<meta content="app-id=com.ibm.lotus.connections.mobile" name="google-play-app" />
+ 
+ 
+<title>
