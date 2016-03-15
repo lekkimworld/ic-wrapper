@@ -9,7 +9,7 @@
 		<servlet-class>org.openntf.icw.ExtracterServlet</servlet-class>
 		<init-param>
 			<param-name>hostname</param-name>
-			<param-value>IBM Connections hostname</param-value>
+			<param-value>inside.intravision.dk</param-value>
 		</init-param>
 		<init-param>
 			<param-name>title</param-name>
