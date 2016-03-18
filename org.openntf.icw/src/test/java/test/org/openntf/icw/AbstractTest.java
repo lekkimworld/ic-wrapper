@@ -17,6 +17,7 @@ public abstract class AbstractTest {
 					@Override
 					public CharSequence GET(String endpoint, boolean auth) throws Exception {
 						String strurl = StringUtils.replaceChars(endpoint, '/', '_');
+						strurl = StringUtils.replace(strurl, ".jsp", ".txt");
 						return loadTestString(strurl);
 					}
 				};

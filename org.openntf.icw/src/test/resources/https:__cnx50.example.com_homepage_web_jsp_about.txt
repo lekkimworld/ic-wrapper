@@ -42,7 +42,7 @@
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
 
-<link rel="shortcut icon" href="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.oneui3.styles/imageLibrary/Icons/ComponentsGray/ProfilesGray.ico?etag=20160123.163812" type="image/x-icon">
+<link rel="shortcut icon" href="https://apps.na.collabserv.com/connections/resources/web/com.ibm.oneui3.styles/imageLibrary/Icons/ComponentsGray/ProfilesGray.ico?etag=20160123.163812" type="image/x-icon">
 
 <!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
 
@@ -50,12 +50,12 @@
 <!--[if IE 7]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie7";</script><![endif]-->
 <!--[if IE 8]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie8";</script><![endif]-->
 <!--[if IE 9]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie9";</script><![endif]-->
-<link rel="stylesheet" type="text/css" id="lotusBaseStylesheet" href="https://connections.vestergaardcompany.com/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/base/package3.css&etag=20160123.163812" appName="profiles" base="https://connections.vestergaardcompany.com/connections/resources/web/" query="?version=oneui3&rtl=false&etag=20160123.163812" theme="gen4" defaultTheme="gen4" oneui="3"></link>
-<link rel="stylesheet" type="text/css" id="lotusSpritesStylesheet" href="https://connections.vestergaardcompany.com/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/sprites.css&etag=20160123.163812"></link>
-<link rel="stylesheet" type="text/css" id="lotusThemeStylesheet" href="https://connections.vestergaardcompany.com/connections/resources/web/_lconntheme/gen4.css?version=oneui3&rtl=false&etag=20160123.163812"></link>
+<link rel="stylesheet" type="text/css" id="lotusBaseStylesheet" href="https://apps.na.collabserv.com/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/base/package3.css&etag=20160123.163812" appName="profiles" base="https://apps.na.collabserv.com/connections/resources/web/" query="?version=oneui3&rtl=false&etag=20160123.163812" theme="gen4" defaultTheme="gen4" oneui="3"></link>
+<link rel="stylesheet" type="text/css" id="lotusSpritesStylesheet" href="https://apps.na.collabserv.com/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/sprites.css&etag=20160123.163812"></link>
+<link rel="stylesheet" type="text/css" id="lotusThemeStylesheet" href="https://apps.na.collabserv.com/connections/resources/web/_lconntheme/gen4.css?version=oneui3&rtl=false&etag=20160123.163812"></link>
 <!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
 
-<link rel="stylesheet" type="text/css" id="lotusAppStylesheet" href="https://connections.vestergaardcompany.com/connections/resources/web/_lconnappstyles/gen4/profiles.css?version=oneui3&rtl=false&etag=20160123.163812"></link>
+<link rel="stylesheet" type="text/css" id="lotusAppStylesheet" href="https://apps.na.collabserv.com/connections/resources/web/_lconnappstyles/gen4/profiles.css?version=oneui3&rtl=false&etag=20160123.163812"></link>
 <!-- Copyright IBM Corp. 2014  All Rights Reserved.                    -->
 
 <!-- IBM Connections Mobile App for iOS -->
@@ -124,7 +124,7 @@
 		userid: "1D8CE7F0-8F12-4D57-BDEA-6EA204BE99E0",
 		displayName: "",
 		status: "",
-		email: "conn-admin@vestergaardcompany.com",
+		email: "conn-admin@example.com",
 		isExternal: false,
 		enabledPermissions: [] 		
 	};
@@ -167,10 +167,10 @@
 	
 	var appName = "profile";
 
-	var svcHrefProfiles = "https://connections.vestergaardcompany.com/profiles";
+	var svcHrefProfiles = "https://apps.na.collabserv.com/profiles";
 	var applicationContext = "/profiles";
 
-	var svcHrefHelp = "https://connections.vestergaardcompany.com/help";
+	var svcHrefHelp = "https://apps.na.collabserv.com/help";
 	var appCtxHelp = svcHrefHelp.substring(svcHrefHelp.lastIndexOf("/"));
 
 	// alert("profiles: \n["+applicationContext+"]\n["+svcHrefProfiles+"]\n\n"+"help: \n["+appCtxHelp+"]\n["+svcHrefHelp+"]\n");
@@ -189,7 +189,7 @@ var ibmConfig = {
    versionStamp: "20160123.163812"
 };
 var baseProtocol = "https";
-var baseHost = "connections.vestergaardcompany.com";
+var baseHost = "apps.na.collabserv.com";
 var basePath = "/connections/resources";
 var needProxy = (baseHost != window.location.host || baseProtocol+":" != window.location.protocol);
 var dojoConfig = djConfig = {
@@ -198,7 +198,7 @@ var dojoConfig = djConfig = {
    baseUrl: (needProxy ? (ibmConfig.proxyURL + encodeURIComponent(baseProtocol) + "/" + encodeURIComponent(baseHost)) : (baseProtocol + "://" + baseHost)) + basePath + "/web/dojo/",
    locale: "en-us",
    dojoBlankHtmlUrl: "/profiles/static/20160123.163812/nav/blankIE.html",
-   blankGif: "https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812",
+   blankGif: "https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812",
    useCommentedJson: true,  
    proxy: "/profiles/ajaxProxy",
    localizationComplete: true
@@ -206,26 +206,26 @@ var dojoConfig = djConfig = {
 </script>
 <script type="text/javascript">
 var netJazzAjaxConfig = {
-    base: "https://connections.vestergaardcompany.com/connections/resources",
+    base: "https://apps.na.collabserv.com/connections/resources",
     skipStyles: true,
     params: "etag=20160123.163812&lang=en&country=US"
 };
-CKEDITOR_BASEPATH = window.CKEDITOR_BASEPATH || "https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.oneui.ckeditor/editor/"; 
+CKEDITOR_BASEPATH = window.CKEDITOR_BASEPATH || "https://apps.na.collabserv.com/connections/resources/web/com.ibm.oneui.ckeditor/editor/"; 
 </script>
 <script type="text/javascript">
 	djConfig.parseOnLoad = true;
 
 	ibmConfig.portalURI = applicationContext + "/mashupmaker/enabler";
-	ibmConfig.proxyURL = 'https://connections.vestergaardcompany.com/profiles/ajaxProxy/';
+	ibmConfig.proxyURL = 'https://apps.na.collabserv.com/profiles/ajaxProxy/';
 	ibmConfig.loadServices = false;
-	ibmConfig.loadingHTML = '<img src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" height="130" width="0"></img>';
+	ibmConfig.loadingHTML = '<img src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" height="130" width="0"></img>';
 </script>
-<script type="text/javascript" src="https://connections.vestergaardcompany.com/connections/resources/web/_js/?include=dojo.main~&etag=20160123.163812&_proxyURL=https%3A%2F%2Fconnections.vestergaardcompany.com%2Fconnections%2Fresources&ss=20160123.163812&lang=en&country=US&variant="></script>
-<script type="text/javascript" src="https://connections.vestergaardcompany.com/connections/resources/web/_js/?include=lconn.core.bundle_common~&etag=20160123.163812&exclude=dojo.main~&_proxyURL=https%3A%2F%2Fconnections.vestergaardcompany.com%2Fconnections%2Fresources&ss=20160123.163812&lang=en&country=US&variant="></script>
-<script type="text/javascript" src="https://connections.vestergaardcompany.com/connections/resources/web/_js/?include=lconn.profiles.profilesApp~&etag=20160123.163812&exclude=dojo.main~lconn.core.bundle_common~&_proxyURL=https%3A%2F%2Fconnections.vestergaardcompany.com%2Fconnections%2Fresources&ss=20160123.163812&lang=en&country=US&variant="></script>
+<script type="text/javascript" src="https://apps.na.collabserv.com/connections/resources/web/_js/?include=dojo.main~&etag=20160123.163812&_proxyURL=https%3A%2F%2Fapps.na.collabserv.com%2Fconnections%2Fresources&ss=20160123.163812&lang=en&country=US&variant="></script>
+<script type="text/javascript" src="https://apps.na.collabserv.com/connections/resources/web/_js/?include=lconn.core.bundle_common~&etag=20160123.163812&exclude=dojo.main~&_proxyURL=https%3A%2F%2Fapps.na.collabserv.com%2Fconnections%2Fresources&ss=20160123.163812&lang=en&country=US&variant="></script>
+<script type="text/javascript" src="https://apps.na.collabserv.com/connections/resources/web/_js/?include=lconn.profiles.profilesApp~&etag=20160123.163812&exclude=dojo.main~lconn.core.bundle_common~&_proxyURL=https%3A%2F%2Fapps.na.collabserv.com%2Fconnections%2Fresources&ss=20160123.163812&lang=en&country=US&variant="></script>
 
 <script>	
-	var profilesGlobalServices = {"help":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/help","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/help"},"microblogging":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections\/opensocial","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections\/opensocial"},"bss":{"enabled":false,"ssl_enabled":false},"metrics":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/metrics","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/metrics"},"wikis":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/wikis","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/wikis"},"opengraph":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections\/opengraph","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections\/opengraph"},"sand":{"enabled":true,"ssl_enabled":true},"pushnotification":{"enabled":false,"ssl_enabled":false},"personTag":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/profiles\/ibm_semanticTagServlet","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/profiles\/ibm_semanticTagServlet"},"communities":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/communities","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/communities"},"ecm_files":{"enabled":false,"ssl_enabled":false},"oauthprovider":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/oauth2","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/oauth2"},"connectionsmail":{"enabled":false,"ssl_enabled":false},"mediaGallery":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/news\/widgets\/lw","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/news\/widgets\/lw"},"webresources":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections\/resources","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections\/resources"},"blogs":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/blogs","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/blogs"},"viewer":{"enabled":false,"ssl_enabled":false},"news":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/news","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/news"},"oauth":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections\/oauth","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections\/oauth"},"dogear":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/dogear","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/dogear"},"opensocialLocked":{"enabled":false,"ssl_enabled":false},"mobile":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/mobile","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/mobile"},"quickr":{"enabled":false,"ssl_enabled":false},"bookmarklet":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections\/bookmarklet","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections\/bookmarklet"},"moderation":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/moderation","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/moderation"},"deploymentConfig":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections"},"search":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/search","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/search"},"profiles":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/profiles","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/profiles"},"thumbnail":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections\/thumbnail","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections\/thumbnail"},"activities":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/activities","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/activities"},"directory":{"enabled":false,"ssl_enabled":false},"homepage":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/homepage","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/homepage"},"forums":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/forums","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/forums"},"opensocial":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/connections\/opensocial","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/connections\/opensocial"},"files":{"enabled":true,"secureUrl":"https:\/\/connections.vestergaardcompany.com\/files","ssl_enabled":true,"url":"http:\/\/connections.vestergaardcompany.com\/files"},"cognos":{"enabled":false,"ssl_enabled":false},"scprofiles":{"enabled":false,"ssl_enabled":false},"sametimeProxy":{"enabled":false,"ssl_enabled":false},"docs":{"enabled":false,"ssl_enabled":false}}; // WhiteList Helper Code
+	var profilesGlobalServices = {"help":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/help","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/help"},"microblogging":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections\/opensocial","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections\/opensocial"},"bss":{"enabled":false,"ssl_enabled":false},"metrics":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/metrics","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/metrics"},"wikis":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/wikis","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/wikis"},"opengraph":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections\/opengraph","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections\/opengraph"},"sand":{"enabled":true,"ssl_enabled":true},"pushnotification":{"enabled":false,"ssl_enabled":false},"personTag":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/profiles\/ibm_semanticTagServlet","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/profiles\/ibm_semanticTagServlet"},"communities":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/communities","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/communities"},"ecm_files":{"enabled":false,"ssl_enabled":false},"oauthprovider":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/oauth2","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/oauth2"},"connectionsmail":{"enabled":false,"ssl_enabled":false},"mediaGallery":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/news\/widgets\/lw","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/news\/widgets\/lw"},"webresources":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections\/resources","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections\/resources"},"blogs":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/blogs","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/blogs"},"viewer":{"enabled":false,"ssl_enabled":false},"news":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/news","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/news"},"oauth":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections\/oauth","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections\/oauth"},"dogear":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/dogear","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/dogear"},"opensocialLocked":{"enabled":false,"ssl_enabled":false},"mobile":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/mobile","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/mobile"},"quickr":{"enabled":false,"ssl_enabled":false},"bookmarklet":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections\/bookmarklet","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections\/bookmarklet"},"moderation":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/moderation","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/moderation"},"deploymentConfig":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections"},"search":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/search","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/search"},"profiles":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/profiles","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/profiles"},"thumbnail":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections\/thumbnail","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections\/thumbnail"},"activities":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/activities","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/activities"},"directory":{"enabled":false,"ssl_enabled":false},"homepage":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/homepage","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/homepage"},"forums":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/forums","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/forums"},"opensocial":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/connections\/opensocial","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/connections\/opensocial"},"files":{"enabled":true,"secureUrl":"https:\/\/apps.na.collabserv.com\/files","ssl_enabled":true,"url":"http:\/\/apps.na.collabserv.com\/files"},"cognos":{"enabled":false,"ssl_enabled":false},"scprofiles":{"enabled":false,"ssl_enabled":false},"sametimeProxy":{"enabled":false,"ssl_enabled":false},"docs":{"enabled":false,"ssl_enabled":false}}; // WhiteList Helper Code
 		
 	//-------------------------------------------[  Sametime Configuration  ] 
 	var sametimeAwarenessConfig = {	
@@ -305,7 +305,7 @@ CKEDITOR_BASEPATH = window.CKEDITOR_BASEPATH || "https://connections.vestergaard
 			<div class="lotusDialogHeader">
 				<h1 class="lotusHeading">Profiles</h1>
 				<a title='Close' role="button" class="lotusRight lotusDialogClose" href="javascript:;" onclick="dijit.byId('lotusAlertDialog').hide(); return true;">
-					<img src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" role="presentation" alt='Close' />
+					<img src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" role="presentation" alt='Close' />
 					<span class="lotusAltText">X</span>
 				</a>
 			</div>		
@@ -420,15 +420,15 @@ if (self != top) {
                       _lconn_menuid="lconnheadermenu-user"
                       aria-label="Current user Connections admin"
                       src="/profiles/static/20160123.163812!en_us/nav/templates/menu/user.jsp?appName=profiles&username=Connections+admin&userid=1D8CE7F0-8F12-4D57-BDEA-6EA204BE99E0"
-                      href="javascript:;"><img alt="Connections admin" src="https://connections.vestergaardcompany.com/profiles/photo.do?userid=1D8CE7F0-8F12-4D57-BDEA-6EA204BE99E0&small=true" width=26 height=26></img> <img role="presentation" alt="" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></span></li><li id="logoutLi" class="lotusHidden" style="display:none"><span id="loginLabel" role="region" aria-label="Log in / log out"><a id="logoutLink" href="/profiles/ibm_security_logout?logoutExitPage=%2fhtml%2faboutView.do%3flang%3den_us" >Log Out</a></span></li><li class="shareboxLi" id="headerSharebox" ><a class="lotusBannerBtn" href="javascript:;" onclick="dojo.stopEvent(event);dojo.require('net.jazz.ajax.xdloader');net.jazz.ajax.xdloader.load_async('com.ibm.social.sharebox.dialog', dojo.hitch(this, function() {com.ibm.social.sharebox.show();}));" role="button">Share</a></li><li id="languageSelectorText" style="display: none;"></li><li id="headerHelpLi" ><a role="button" aria-label="Open help window" href="javascript:openHelpWindow(&#039;&#039;,&#039;/topic/com.ibm.lotus.connections.profiles.help/pframe.html&#039;);" id="headerHelpLink"><img role="presentation" alt="" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="iconsOther16 iconsOther16-bannerHelpNormal16" /><span class="lotusAltText">?</span></a></li><li><span class="lotusBranding"><img src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span></li></ul><ul class="lotusInlinelist lotusLinks" role="navigation" aria-label="Connections"><li id="lotusBannerHomepage" class="lotusFirst "><a href="https://connections.vestergaardcompany.com/homepage/" title="Home" aria-label="Home"><img alt="" role="presentation" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lconnBannerIcon lconnSprite lconnSprite-iconHomeBlue16"><span id="lconnBannerHomepageLabel">Home</span></a></li><li id="lotusBannerProfiles" class=" lotusSelected"><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      href="javascript:;"><img alt="Connections admin" src="https://apps.na.collabserv.com/profiles/photo.do?userid=1D8CE7F0-8F12-4D57-BDEA-6EA204BE99E0&small=true" width=26 height=26></img> <img role="presentation" alt="" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></span></li><li id="logoutLi" class="lotusHidden" style="display:none"><span id="loginLabel" role="region" aria-label="Log in / log out"><a id="logoutLink" href="/profiles/ibm_security_logout?logoutExitPage=%2fhtml%2faboutView.do%3flang%3den_us" >Log Out</a></span></li><li class="shareboxLi" id="headerSharebox" ><a class="lotusBannerBtn" href="javascript:;" onclick="dojo.stopEvent(event);dojo.require('net.jazz.ajax.xdloader');net.jazz.ajax.xdloader.load_async('com.ibm.social.sharebox.dialog', dojo.hitch(this, function() {com.ibm.social.sharebox.show();}));" role="button">Share</a></li><li id="languageSelectorText" style="display: none;"></li><li id="headerHelpLi" ><a role="button" aria-label="Open help window" href="javascript:openHelpWindow(&#039;&#039;,&#039;/topic/com.ibm.lotus.connections.profiles.help/pframe.html&#039;);" id="headerHelpLink"><img role="presentation" alt="" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="iconsOther16 iconsOther16-bannerHelpNormal16" /><span class="lotusAltText">?</span></a></li><li><span class="lotusBranding"><img src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span></li></ul><ul class="lotusInlinelist lotusLinks" role="navigation" aria-label="Connections"><li id="lotusBannerHomepage" class="lotusFirst "><a href="https://apps.na.collabserv.com/homepage/" title="Home" aria-label="Home"><img alt="" role="presentation" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lconnBannerIcon lconnSprite lconnSprite-iconHomeBlue16"><span id="lconnBannerHomepageLabel">Home</span></a></li><li id="lotusBannerProfiles" class=" lotusSelected"><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
                       onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
                       onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
                       role="button" 
                       _lconn_menuid="lconnheadermenu-people"
                       aria-label="Profiles" 
                       src="/profiles/static/20160123.163812!en_us/nav/templates/menu/people.jsp"
-                      href="https://connections.vestergaardcompany.com/profiles/"
-                      errormessage="Profiles is not available"><img alt="" role="presentation" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lconnBannerIcon lconnSprite lconnSprite-iconProfilesBlue16">Profiles <img role="presentation" alt="" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerCommunities" class=" "><a id="lotusBannerCommunitiesLink" 
+                      href="https://apps.na.collabserv.com/profiles/"
+                      errormessage="Profiles is not available"><img alt="" role="presentation" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lconnBannerIcon lconnSprite lconnSprite-iconProfilesBlue16">Profiles <img role="presentation" alt="" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerCommunities" class=" "><a id="lotusBannerCommunitiesLink" 
                       onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
                       onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
                       onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
@@ -436,8 +436,8 @@ if (self != top) {
                       _lconn_menuid="lconnheadermenu-communities"
                       aria-label="Communities" 
                       src="/profiles/static/20160123.163812!en_us/nav/templates/menu/communities.jsp?authenticated=true"
-                      href="https://connections.vestergaardcompany.com/communities/"
-                      errormessage="Communities is not available"><img alt="" role="presentation" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lconnBannerIcon lconnSprite lconnSprite-iconCommunitiesBlue16">Communities <img role="presentation" alt="" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerApps" class=" "><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      href="https://apps.na.collabserv.com/communities/"
+                      errormessage="Communities is not available"><img alt="" role="presentation" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lconnBannerIcon lconnSprite lconnSprite-iconCommunitiesBlue16">Communities <img role="presentation" alt="" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerApps" class=" "><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
                    onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
                    onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
                    role="button" 
@@ -445,7 +445,7 @@ if (self != top) {
                    aria-label="Apps" 
                    src="/profiles/static/20160123.163812!en_us/nav/templates/menu/apps.jsp"
                    href="javascript:;"
-                   errormessage="Profiles is not available">Apps <img role="presentation" alt="" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerHeaderMetrics" style="display:none" class=""><a href="https://connections.vestergaardcompany.com/metrics/">Metrics</a></li><li id="lotusBannerModeration" style="display:none" class=""><a href="https://connections.vestergaardcompany.com/moderation/">Moderation</a></li></ul><div class="lotusClear"><!-- IE --></div></div></div>
+                   errormessage="Profiles is not available">Apps <img role="presentation" alt="" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerHeaderMetrics" style="display:none" class=""><a href="https://apps.na.collabserv.com/metrics/">Metrics</a></li><li id="lotusBannerModeration" style="display:none" class=""><a href="https://apps.na.collabserv.com/moderation/">Moderation</a></li></ul><div class="lotusClear"><!-- IE --></div></div></div>
 
 </div>
 <script type="text/javascript">
@@ -509,7 +509,7 @@ dojo.addOnLoad(function(){
 			  <div class="lotusInner">
 				 <div class="lotusTitleBarContent">
 					<h2 class="lotusHeading">
-						<img alt="" class="lotusIcon iconsComponentsBlue24 iconsComponentsBlue24-ProfilesBlue24" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812"><span class="lotusText">Profiles</span>
+						<img alt="" class="lotusIcon iconsComponentsBlue24 iconsComponentsBlue24-ProfilesBlue24" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812"><span class="lotusText">Profiles</span>
 					</h2>
 					<div aria-label="Profiles" role="navigation" aria-controls="lotusMain">
 					   <ul id="lotusHeaderNavigation_UL" class="lotusNavTabs" role="toolbar" aria-label="Profiles">
@@ -541,7 +541,7 @@ if (typeof(dojo) != "undefined") {
 			if (cntr) {
 			
 				var opts = {
-					searchContextPath: 'https://connections.vestergaardcompany.com/search',
+					searchContextPath: 'https://apps.na.collabserv.com/search',
 					localOptions: []
 				};
 
@@ -647,7 +647,7 @@ if (typeof(dojo) != "undefined") {
 		userid: "1D8CE7F0-8F12-4D57-BDEA-6EA204BE99E0",
 		displayName: "",
 		status: "",
-		email: "conn-admin@vestergaardcompany.com",
+		email: "conn-admin@example.com",
 		isExternal: false,
 		enabledPermissions: [] 		
 	};
@@ -718,7 +718,7 @@ if (typeof(dojo) != "undefined") {
 			<a id="mainContent" name="mainContent"></a><!-- skip links for accessibility -->
 			<!--  aboutBox -->
 			<div class="lotusAboutBox">	
-				<img class="iconsComponentsWhite128 iconsComponentsWhite128-ProfilesWhite128" src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" alt=""/>
+				<img class="iconsComponentsWhite128 iconsComponentsWhite128-ProfilesWhite128" src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20160123.163812" alt=""/>
 				<!-- aboutText -->
 				<div class="lotusAboutText">
 					<h1>Profiles</h1>
@@ -766,7 +766,7 @@ if (typeof(dojo) != "undefined") {
 
 <!-- nav footer -->
 <div id="lotusFooter" class="lotusFooter" role="contentinfo">
-	<ul><li><a href="https://connections.vestergaardcompany.com/homepage/">Home</a></li><li><a href="javascript:;" onclick="javascript:openHelpWindow('','/topic/com.ibm.lotus.connections.profiles.help/pframe.html'); return false;" class="">Help</a></li><li><a href="http://www-10.lotus.com/ldd/lcforum.nsf">IBM Support Forums</a></li> <li><a href="/profiles/nav/toolbox?appName=profiles" class="">Bookmarking Tools</a></li><li id="lotusBannerFooterMetrics" style="display:none"><a class="lotusMetricsReaderLink" href="https://connections.vestergaardcompany.com/metrics/">Server Metrics</a></li><li id="lconnFooterMobile" class="lotusHidden"><a id="lconnMobileRedirectLink" href="javascript:;">Mobile UI</a></li><li><a href="/profiles/app/about" class="">About</a></li><li><a href="http://www-306.ibm.com/software/lotus/products/connections/">IBM Connections on ibm.com</a></li><li><a href="http://www.lotus.com/ldd/doc/cct/nextgen.nsf/feedback_choice?OpenForm&amp;Context=footer+ventura+NoTitle+4.5">Submit Feedback</a></li></ul><script type="text/javascript">
+	<ul><li><a href="https://apps.na.collabserv.com/homepage/">Home</a></li><li><a href="javascript:;" onclick="javascript:openHelpWindow('','/topic/com.ibm.lotus.connections.profiles.help/pframe.html'); return false;" class="">Help</a></li><li><a href="http://www-10.lotus.com/ldd/lcforum.nsf">IBM Support Forums</a></li> <li><a href="/profiles/nav/toolbox?appName=profiles" class="">Bookmarking Tools</a></li><li id="lotusBannerFooterMetrics" style="display:none"><a class="lotusMetricsReaderLink" href="https://apps.na.collabserv.com/metrics/">Server Metrics</a></li><li id="lconnFooterMobile" class="lotusHidden"><a id="lconnMobileRedirectLink" href="javascript:;">Mobile UI</a></li><li><a href="/profiles/app/about" class="">About</a></li><li><a href="http://www-306.ibm.com/software/lotus/products/connections/">IBM Connections on ibm.com</a></li><li><a href="http://www.lotus.com/ldd/doc/cct/nextgen.nsf/feedback_choice?OpenForm&amp;Context=footer+ventura+NoTitle+4.5">Submit Feedback</a></li></ul><script type="text/javascript">
 (function(){
    function loadConnectionsLanguageSelector() {
       try {
@@ -792,7 +792,7 @@ if (typeof(dojo) != "undefined") {
        </script>
 </div>
 <div>
-		<table cellspacing="0" role="presentation" class="lotusLegal"><tbody><tr><td><div aria-label="IBM" class="lotusIBMLogo"> </div><span class="lotusAltText">IBM</span></td><td class="lotusLicense">Licensed Materials - Property of IBM, 5724-S68 © Copyright IBM Corporation 2007, 2014. All Rights Reserved. IBM, the IBM logo, ibm.com and Lotus are trademarks of IBM Corporation in the United States, other countries, or both. Java and all Java-based trademarks are trademarks of Sun Microsystems, Inc. in the United States, other countries, or both. Other company, product, or service names may be trademarks or service marks of others.  A current list of IBM trademarks is available on the Web at www.ibm.com/legal/copytrade.shtml. (http://www.ibm.com/legal/copytrade.shtml.)  U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  This Program is licensed under the terms of the license agreement accompanying the Program.  This license agreement may be either located in a Program directory folder or library identified as "License" or "Non IBM License", if applicable, or provided as a printed license agreement. Please read this agreement carefully before using the Program. By using the Program, you agree to these terms.</td><td><img src="https://connections.vestergaardcompany.com/connections/resources/web/com.ibm.oneui3.styles/imageLibrary/Branding/Logos/javaCompatibleLogoWhite.png?etag=20160123.163812" alt="Java Compatible" /><span class="lotusAltText">Java Compatible</span></td></tr><tr><td></td><td class="lotusBuild">Release v5.0.0.0 build IC5.0_CR_Profiles_20141013-1531</td><td></td></tr></tbody></table>
+		<table cellspacing="0" role="presentation" class="lotusLegal"><tbody><tr><td><div aria-label="IBM" class="lotusIBMLogo"> </div><span class="lotusAltText">IBM</span></td><td class="lotusLicense">Licensed Materials - Property of IBM, 5724-S68 © Copyright IBM Corporation 2007, 2014. All Rights Reserved. IBM, the IBM logo, ibm.com and Lotus are trademarks of IBM Corporation in the United States, other countries, or both. Java and all Java-based trademarks are trademarks of Sun Microsystems, Inc. in the United States, other countries, or both. Other company, product, or service names may be trademarks or service marks of others.  A current list of IBM trademarks is available on the Web at www.ibm.com/legal/copytrade.shtml. (http://www.ibm.com/legal/copytrade.shtml.)  U.S. Government Users Restricted Rights:  Use, duplication or disclosure restricted by GSA ADP Schedule Contract with IBM Corp.  This Program is licensed under the terms of the license agreement accompanying the Program.  This license agreement may be either located in a Program directory folder or library identified as "License" or "Non IBM License", if applicable, or provided as a printed license agreement. Please read this agreement carefully before using the Program. By using the Program, you agree to these terms.</td><td><img src="https://apps.na.collabserv.com/connections/resources/web/com.ibm.oneui3.styles/imageLibrary/Branding/Logos/javaCompatibleLogoWhite.png?etag=20160123.163812" alt="Java Compatible" /><span class="lotusAltText">Java Compatible</span></td></tr><tr><td></td><td class="lotusBuild">Release v5.0.0.0 build IC5.0_CR_Profiles_20141013-1531</td><td></td></tr></tbody></table>
 </div>
 
 <script type="text/javascript">
