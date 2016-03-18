@@ -15,6 +15,7 @@ public class Context implements Serializable {
 	
 	// declarations
 	private IURLFactory factory = null;
+	protected String contextSearch = IConstants.CONTEXT_SEARCH;
 	protected String contextHomepage = IConstants.CONTEXT_HOMEPAGE;
 	protected String title = "IBM Connections Extractor";
 	protected String releaseString = null;
@@ -44,6 +45,11 @@ public class Context implements Serializable {
 	
 	public Context setContextHomepage(String context) {
 		this.contextHomepage = context;
+		return this;
+	}
+	
+	public Context setContextSearch(String context) {
+		this.contextSearch = context;
 		return this;
 	}
 	

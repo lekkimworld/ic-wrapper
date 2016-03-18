@@ -2,6 +2,8 @@ package org.openntf.icw;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 import javax.servlet.ServletConfig;
 import javax.servlet.ServletException;
@@ -13,16 +15,24 @@ import javax.servlet.http.HttpServletResponse;
 import org.openntf.icw.AbstractExtracter.MECHANISM;
 
 public class ExtracterServlet extends HttpServlet {
+	// constants
 	private static final long serialVersionUID = 1L;
+	
+	// logger
+	private static final Logger logger = Logger.getLogger(ExtracterServlet.class.getPackage().getName());
 	
 	// declarations
 	private String hostname = null;
 	private String langDefault = null;
+	private String tokenName = null;
+	private String title = null;
 	
 	@Override
 	public void init(ServletConfig config) throws ServletException {
 		this.hostname = this.getInitParamStr(config, "hostname", null);
 		this.langDefault = this.getInitParamStr(config, "lang", IConstants.LANGUAGE_EN_US);
+		this.tokenName = this.getInitParamStr(config, "tokenName", IConstants.TOKENNAME_LTPATOKEN2);
+		this.title = this.getInitParamStr(config, "title", "IBM Connections Extracter");
 	}
 
 	/**
@@ -31,19 +41,22 @@ public class ExtracterServlet extends HttpServlet {
 	protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
 		// create context
 		Context ctx = new Context();
-		ctx.setTokenName(IConstants.TOKENNAME_LTPATOKEN2);
+		ctx.setTokenName(this.tokenName);
 		ctx.setHostname(this.hostname);
 		
-		// get LTPA token and make sure we have it
-		for (Cookie cookie : req.getCookies()) {
-			if (cookie.getName().equals(ctx.tokenName)) {
-				// get value
-				String cookieValue = cookie.getValue();
-				ctx.setTokenValue(cookieValue);
-				break;
+		if (null != req.getCookies()) {
+			// get LTPA token and make sure we have it
+			for (Cookie cookie : req.getCookies()) {
+				if (cookie.getName().equals(ctx.tokenName)) {
+					// get value
+					String cookieValue = cookie.getValue();
+					ctx.setTokenValue(cookieValue);
+					break;
+				}
 			}
 		}
 		if (!ctx.hasLtpaToken()) {
+			logger.warning("We detected a remote user but no LtpaToken(s) are available - remember to map all authenticated users to the user role in WAS ISC.");
 			resp.sendError(HttpServletResponse.SC_BAD_REQUEST, "We detected a remote user but no LtpaToken(s) are available.");
 			return;
 		}
@@ -73,11 +86,10 @@ public class ExtracterServlet extends HttpServlet {
 		try {
 			e = AbstractExtracter.getExtractor(ctx);
 		} catch (Throwable t) {
-			
-		}
-		if (null == e) {
 			// unable to detect version
-			resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Unable to create extractor based on release string (" + ctx.releaseString + ").");
+			String msg = "Unable to determine which extractor to use based on release string (" + ctx.releaseString + ") - maybe you are running an unsupported version";
+			logger.log(Level.SEVERE, msg, t);
+			resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, msg);
 			return;
 		}
 		
@@ -98,23 +110,19 @@ public class ExtracterServlet extends HttpServlet {
 		try {
 			result = e.extract(MECHANISM.PURE);
 		} catch (Throwable t) {
-			
+			logger.log(Level.SEVERE, "Unable to extract data based on PURE strategy", t);
+			resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Unable to extract data based on PURE strategy");
+			return;
 		}
 		
 		// build iframe url
 		final String html_iframe = "<iframe id=\"icw_iframe\" src=\"" + reqUrl + "\" height=\"" + reqHeight + "px\" width=\"100%\" style=\"border: 0\" border=\"0\"></iframe>";
 		
-		// build result
+		// build result and send it
 		StringBuilder b = new StringBuilder();
-		b.append(result[0]).append("Some Title").append(result[1]).append(result[2]).append(html_iframe).append(result[3]);
-		
-		try {
-			PrintWriter pwResp = resp.getWriter();
-			pwResp.print(b.toString());
-			
-		} catch (Throwable t) {
-			t.printStackTrace();
-		}
+		b.append(result[0]).append(this.title).append(result[1]).append(html_iframe).append(result[2]);
+		PrintWriter pwResp = resp.getWriter();
+		pwResp.print(b.toString());
 	}
 	
 	private String getInitParamStr(ServletConfig config, String key, String defaultValue) {

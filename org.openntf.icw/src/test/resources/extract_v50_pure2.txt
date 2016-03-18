@@ -1,0 +1,254 @@
+</div></div> 
+ 
+ 
+
+<script type="text/javascript">
+var ibmConfig = {
+   serviceName: "search",
+   proxyURL: "/search/ajaxProxy/",
+   contextRootEnabler: "/search",
+   versionStamp: "20150916.130057"
+};
+var baseProtocol = "http";
+var baseHost = "showtime.ontimesuite.com";
+var basePath = "/connections/resources";
+var needProxy = (baseHost != window.location.host || baseProtocol+":" != window.location.protocol);
+var dojoConfig = djConfig = {
+   async: true,
+   isDebug: false,
+   baseUrl: (needProxy ? (ibmConfig.proxyURL + encodeURIComponent(baseProtocol) + "/" + encodeURIComponent(baseHost)) : (baseProtocol + "://" + baseHost)) + basePath + "/web/dojo/",
+   locale: "en-us",
+   dojoBlankHtmlUrl: "/search/static/20150916.130057/nav/blankIE.html",
+   blankGif: "http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057",
+   useCommentedJson: true,  
+   proxy: "/search/ajaxProxy",
+   localizationComplete: true
+};
+</script>
+<script type="text/javascript">
+var netJazzAjaxConfig = {
+    base: "http://showtime.ontimesuite.com/connections/resources",
+    skipStyles: true,
+    params: "etag=20150916.130057&lang=en&country=US"
+};
+CKEDITOR_BASEPATH = window.CKEDITOR_BASEPATH || "http://showtime.ontimesuite.com/connections/resources/web/com.ibm.oneui.ckeditor/editor/"; 
+</script>
+<script type="text/javascript">djConfig.parseOnLoad=true;
+</script>
+<script type="text/javascript" src="http://showtime.ontimesuite.com/connections/resources/web/_js/?include=dojo.main~&etag=20150916.130057&_proxyURL=http%3A%2F%2Fshowtime.ontimesuite.com%2Fconnections%2Fresources&ss=20150916.130057&lang=en&country=US&variant="></script>
+<script type="text/javascript" src="http://showtime.ontimesuite.com/connections/resources/web/_js/?include=lconn.core.bundle_common~&etag=20150916.130057&exclude=dojo.main~&_proxyURL=http%3A%2F%2Fshowtime.ontimesuite.com%2Fconnections%2Fresources&ss=20150916.130057&lang=en&country=US&variant="></script>
+<script type="text/javascript" src="http://showtime.ontimesuite.com/connections/resources/web/_js/?include=lconn.search.searchApp~&etag=20150916.130057&exclude=dojo.main~lconn.core.bundle_common~&_proxyURL=http%3A%2F%2Fshowtime.ontimesuite.com%2Fconnections%2Fresources&ss=20150916.130057&lang=en&country=US&variant="></script>
+<script type="text/javascript">var openHelpWindow=function(){
+lconn.core.help.launchHelp();
+};
+var openDemoWindow=function(url, /*unused*/width, /*unused*/height) {
+lconn.core.help.launchDemo(url);
+}
+dojo.addOnLoad(function() {
+lconn.core.auth.setAuthCheck(function() { return true; });
+var headerHelpLink=dojo.byId("headerHelpLink");
+if (headerHelpLink){
+dojo.attr(headerHelpLink, "href", "javascript:;");
+dojo.connect(headerHelpLink, "onclick", openHelpWindow);
+}
+/* The logout action is set up in the addOnLoad function so that
+we are guaranteed the authentication JS objects are available. */
+var logoutLink=dojo.byId('logoutLink');
+if (logoutLink) {
+dojo.connect(logoutLink, "onclick", function() {
+var authenticated=lconn.core.auth.isAuthenticated();
+if (authenticated) {
+lconn.core.auth.logout();
+} else {
+lconn.core.auth.login();
+}
+return false;
+});
+}
+});
+</script>
+ 
+<script type="text/javascript">dojo.addOnLoad(function() {
+var bodyElem=document.getElementsByTagName("body")[0];
+if (dojo.hasClass(bodyElem, "dijit_a11y")) {
+dojo.addClass(bodyElem, "lotusImagesOff");
+}
+lconn.search.auth.formBasedUtility.init("/search",null);
+var pTA=dijit.byId("peopleCatcher");
+if(pTA!=null) {
+dojo.connect(pTA, "_handleOnChange", function () {
+var pTATarget=dojo.byId("realPerson");
+var itemSet=pTA.getItem();
+if(itemSet!=null) {
+if(pTATarget!=null) {
+pTATarget.value=itemSet.param;
+if(typeof(itemSet.userid)=="undefined" || itemSet.userid==null){
+pTATarget.value="";
+}
+}
+} else {
+return false;
+}
+});
+dojo.connect(pTA, "onSelect", function() {
+var pTA=dijit.byId("peopleCatcher");
+var pTATarget=dojo.byId("realPerson");
+if(pTATarget.value==""){
+pTA.reset();
+}
+});
+dojo.attr("peopleCatcher", {"aria-describedby":"peopleCatcher_desc"});
+} else {
+var bhcTypeAhead=dojo.byId("bhc_PeopleTypeAhead_0");
+if (bhcTypeAhead) {
+dojo.attr(bhcTypeAhead, {"aria-describedby":"peopleCatcher_desc"});
+}
+}
+dojo.attr("advancedQuery", {"aria-describedby":"advancedQuery_desc"});
+dojo.attr("tagCatcher", {"aria-describedby":"tagCatcher_desc"});
+dojo.attr("titleQuery", {"aria-describedby":"titleQuery_desc"});
+dojo.query("div.lotusMessage2 a.lotusDelete").connect("onclick", function(){
+dojo.style(this.parentNode,"display","none");
+});
+});
+function setPersonIdForQuery(bhcTypeAheadWidget) {
+var personId=bhcTypeAheadWidget.store.getValue(bhcTypeAheadWidget.item, "i", "u_");
+personId=personId.substring(2);
+dojo.attr("realPerson", "value", personId);
+}
+function setAllChecked(/*string*/domNodeId, /*boolean*/isSelectAll){
+var domNode=dojo.byId(domNodeId);
+var checkboxes=dojo.query("input.searchCheckBoxes",domNode);
+dojo.forEach(checkboxes, function(theCheckBox){
+if ((isSelectAll && !theCheckBox.checked) || (!isSelectAll && theCheckBox.checked))
+theCheckBox.click();	
+}, this);
+}
+function validateForm(formElement) {
+function whitespaceonly(/*string*/inputValue) {
+if(!inputValue) {return true;}
+var trimmed=dojo.trim(inputValue);
+return trimmed.length === 0;
+}
+dojo.query("div.lotusMessage2").style("display","none");
+var aSearch=document.advancedSearchForm1.advancedQuery;
+var tSearch=document.advancedSearchForm1.titleQuery;
+var tCatcher=document.advancedSearchForm1.tag;
+var rPerson=document.advancedSearchForm1.person;
+var checkBoxes=dojo.query("input.searchCheckBoxes",dojo.byId("filterComponents"));
+var passed=true;
+if((!aSearch || whitespaceonly(aSearch.value))
+&& (!tCatcher || whitespaceonly(tCatcher.value))
+&& (!rPerson || whitespaceonly(rPerson.value))
+&& (!tSearch || whitespaceonly(tSearch.value))) {
+passed=false;
+dojo.style("lconnSearchMsgErrorEmptyQuery","display","");
+return false;
+}
+var limitString="";
+var tofilter=false;
+var count=0;
+var item;
+var sourceValues=[];
+dojo.forEach(checkBoxes, function(item){
+if(dojo.attr(item, "checked")===true) {
+count++;
+limitString=dojo.attr(item, "value");
+sourceValues.push("Source/"+dojo.attr(item,"value"));
+} else {
+tofilter=true;
+}
+}, this);
+if(count===1) {
+tofilter=false;
+dojo.attr("componentScope", "value", limitString);
+} else if (count===0){
+passed=false;
+dojo.style("lconnSearchMsgErrorNoScope","display","");
+return false;
+}
+if(tofilter===true) {
+var sourceConstraint={
+type: "category",
+values: sourceValues
+};
+dojo.attr("sourceConstraint", "value", dojo.toJson(sourceConstraint));
+}
+if (rPerson && !whitespaceonly(rPerson.value)){
+var personConstraint={
+type: "category",
+values: ["Person/"+encodeURIComponent(rPerson.value)]
+};
+dojo.attr("personConstraint", "value", dojo.toJson(personConstraint));
+dojo.attr(rPerson, "value", "");
+dojo.attr("peopleCatcher", "value", ""); 
+}
+if (tCatcher && !whitespaceonly(tCatcher.value)){
+var tag=tCatcher.value;
+tag=dojo.trim(tag.toLowerCase());
+var tagConstraint;
+if (tag.indexOf("*")!==-1){
+tagConstraint={
+type: "field",
+id: "tag",
+values: [tag],
+exactMatch: false
+};
+} else {
+tagConstraint={
+type: "category",
+values: ["Tag/"+tag]
+};
+}
+dojo.attr("tagConstraint", "value", dojo.toJson(tagConstraint));
+dojo.attr("tagCatcher", "value", "");
+}
+if(tSearch && !whitespaceonly(tSearch.value)) {
+var fieldConstraint={
+type: "field",
+id: "title",
+values: [tSearch.value],
+exactMatch: false
+};
+dojo.attr("titleConstraint", "value", dojo.toJson(fieldConstraint));
+dojo.attr("titleQuery", "value", "");
+}
+if (passed){
+var emptyInputs=dojo.query('input[value=""]', formElement);
+emptyInputs.attr("disabled",true);
+dojo.attr("titleQuery", "disabled", true);
+}
+return passed;
+}
+</script> 
+ 
+
+
+ 
+<div id="lotusFooter" class="lotusFooter" role="contentinfo"><ul><li><a href="http://showtime.ontimesuite.com/homepage/">Home</a></li><li><a href="javascript:;" onclick="javascript:openHelpWindow(); return false;" class="">Help</a></li><li><a href="http://www-10.lotus.com/ldd/lcforum.nsf">IBM Support Forums</a></li> <li><a href="/search/web/jsp/toolsHomepage.jsp" class="">Bookmarking Tools</a></li><li id="lotusBannerFooterMetrics" style="display:none"><a class="lotusMetricsReaderLink" href="http://showtime.ontimesuite.com/metrics/">Server Metrics</a></li><li id="lconnFooterMobile" class="lotusHidden"><a id="lconnMobileRedirectLink" href="javascript:;">Mobile UI</a></li><li><a href="http://www-306.ibm.com/software/lotus/products/connections/">IBM Connections on ibm.com</a></li><li><a href="http://www.lotus.com/ldd/doc/cct/nextgen.nsf/feedback_choice?OpenForm&amp;Context=footer+ventura+NoTitle+4.5">Submit Feedback</a></li></ul><script type="text/javascript">
+(function(){
+   function loadConnectionsLanguageSelector() {
+      try {
+         dojo.require("lconn.core.header");
+         lconn.core.header.enableLanguageSelector("languageSelectorText", {"da":"Dansk","no":"Norsk (\u200fBokm\u00e5l)","en":"English","de":"Deutsch","ja":"\u65e5\u672c\u8a9e","BD":"BD"},
+            "lcLang", "", -1);
+      } catch (e) {
+         console.error(e);
+      }
+   }
+   if (dojo.exists("lconn.core.header") && !dojo.exists("_skipConnectionsLanguageSelector"))
+      dojo.addOnLoad(loadConnectionsLanguageSelector);
+})();
+</script><script type="text/javascript">
+      dojo.require("lconn.core.header.apps");
+      dojo.require("lconn.core.auth");
+
+    </script><script type="text/javascript">
+         dojo.addOnLoad(function(){
+            lconn.core.header.apps.updateLoginRegion();
+            lconn.core.header.apps.updateBannerByRoles();
+         });
+       </script>
+</div>
+ 
+</div></body></html>

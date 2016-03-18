@@ -12,8 +12,12 @@
 			<param-value>inside.intravision.dk</param-value>
 		</init-param>
 		<init-param>
+			<param-name>tokenName</param-name>
+			<param-value>LtpaToken2</param-value>
+		</init-param>
+		<init-param>
 			<param-name>title</param-name>
-			<param-value>Page title</param-value>
+			<param-value>IBM Connections Extracter</param-value>
 		</init-param>
 	</servlet>
 	<servlet-mapping>

@@ -1,0 +1,395 @@
+
+ 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" ><head> 
+ 
+ 
+
+ 
+ 
+ 
+ 
+ 
+<meta http-equiv="content-type" content="text/html; charset=utf-8"><!-- Copyright IBM Corp. 2015  All Rights Reserved.                    -->
+
+<link rel="shortcut icon" href="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.oneui3.styles/imageLibrary/Branding/Other/ConnectionsBlue16.ico?etag=20150916.130057" type="image/x-icon">
+<link rel="search" type="application/opensearchdescription+xml" title="Connections" href="/search/opensearch.jsp"> 
+ 
+<!-- Copyright IBM Corp. 2015  All Rights Reserved.                    -->
+
+<!--[if IE 6]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie6";</script><![endif]-->
+<!--[if IE 7]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie lotusui_ie7";</script><![endif]-->
+<!--[if IE 8]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie8";</script><![endif]-->
+<!--[if IE 9]><script>document.getElementsByTagName("html")[0].className+=" lotusui_ie9";</script><![endif]-->
+<link rel="stylesheet" type="text/css" id="lotusBaseStylesheet" href="http://showtime.ontimesuite.com/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/base/package3.css&etag=20150916.130057" appName="search" base="http://showtime.ontimesuite.com/connections/resources/web/" query="?version=oneui3&rtl=false&etag=20150916.130057" theme="gen4" defaultTheme="gen4" oneui="3"></link>
+<link rel="stylesheet" type="text/css" id="lotusSpritesStylesheet" href="http://showtime.ontimesuite.com/connections/resources/web/_style?include=com.ibm.lconn.core.styles.oneui3/sprites.css&etag=20150916.130057"></link>
+<link rel="stylesheet" type="text/css" id="lotusThemeStylesheet" href="http://showtime.ontimesuite.com/connections/resources/web/_lconntheme/gen4.css?version=oneui3&rtl=false&etag=20150916.130057"></link>
+<!-- Copyright IBM Corp. 2015  All Rights Reserved.                    -->
+
+<link rel="stylesheet" type="text/css" id="lotusAppStylesheet" href="http://showtime.ontimesuite.com/connections/resources/web/_lconnappstyles/gen4/search.css?version=oneui3&rtl=false&etag=20150916.130057"></link>
+<!-- Copyright IBM Corp. 2015  All Rights Reserved.                    -->
+
+<!-- IBM Connections Mobile App for iOS -->
+<meta content="app-id=450533489" name="apple-itunes-app" />
+<!-- IBM Connections Mobile App for Android -->
+<meta content="app-id=com.ibm.lotus.connections.mobile" name="google-play-app" />
+ 
+ 
+<title>Advanced Search</title> 
+<script type="text/javascript">/*
+* Global JS variable to represent the current logged user
+*/
+var lconnCurrentUser={
+id: "31B19FBF-358F-615D-C125-74F80079127F",
+displayName: "Chris Holmes",
+email: "Chris.Holmes@ontime.com",
+isExternal: false 
+};
+</script></head><body dir="ltr" class="lotusui lotusui30dojo lotusui30_body lotusui30_fonts lotusui30 lotusSpritesOn"><div class="lotusui30_layout lotusFrame"> 
+ 
+ 
+
+ 
+ 
+<div role="banner"><div id="lotusBanner" class="lotusBanner"><script type="text/javascript">
+if (self != top) {
+   try {
+      // Reset location if in different host.
+      // per Same Origin Policy, try to get top location attributes,
+      // will get permission denied if in different origin.
+      if (self.location.hostname != top.location.hostname)
+         top.location=self.location;
+   }catch(e){
+      // reset location if in different origin
+      top.location=self.location;
+   }
+}
+</script>
+<div class="lotusRightCorner">
+   <div class="lotusInner"><div class="lotusLogo" id="lotusLogo"><span class="lotusAltText">Showtime50</span></div><ul class="lotusInlinelist lotusUtility lotusNowrap" id="headerMenuContainer"><li class="lotusFirst" id="lotusPerson"><span id="logoutLabel" aria-label="Log in / log out"><a class="lotusUser" id="headerUserName"
+                      onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);"
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);"
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);"
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-user"
+                      aria-label="Current user Chris Holmes"
+                      src="/search/static/20150916.130057!en_us/nav/templates/menu/user.jsp?appName=search&username=Chris+Holmes&userid=31B19FBF-358F-615D-C125-74F80079127F"
+                      href="javascript:;"><img alt="Chris Holmes" src="http://showtime.ontimesuite.com/profiles/photo.do?userid=31B19FBF-358F-615D-C125-74F80079127F&small=true" width=26 height=26></img> <img role="presentation" alt="" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></span></li><li id="logoutLi" class="lotusHidden" style="display:none"><span id="loginLabel" role="region" aria-label="Log in / log out"><a id="logoutLink" href="javascript:;" >Log Out</a></span></li><li class="shareboxLi" id="headerSharebox" ><a class="lotusBannerBtn" href="javascript:;" onclick="dojo.stopEvent(event);dojo.require('net.jazz.ajax.xdloader');net.jazz.ajax.xdloader.load_async('com.ibm.social.sharebox.dialog', dojo.hitch(this, function() {com.ibm.social.sharebox.show();}));" role="button">Share</a></li><li id="languageSelectorText" style="display: none;"></li><li id="headerHelpLi" ><a role="button" aria-label="Open help window" href="#help" id="headerHelpLink"><img role="presentation" alt="" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="iconsOther16 iconsOther16-bannerHelpNormal16" /><span class="lotusAltText">?</span></a></li><li><span class="lotusBranding"><img src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" alt="IBM" class="lotusIBMLogo" /><span class="lotusAltText">IBM</span></span></li></ul><ul class="lotusInlinelist lotusLinks" role="navigation" aria-label="Connections"><li id="lotusBannerHomepage" class="lotusFirst "><a href="http://showtime.ontimesuite.com/homepage/" title="Home" aria-label="Home"><img alt="" role="presentation" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lconnBannerIcon lconnSprite lconnSprite-iconHomeBlue16"><span id="lconnBannerHomepageLabel">Home</span></a></li><li id="lotusBannerProfiles" class=" "><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-people"
+                      aria-label="Profiles" 
+                      src="/search/static/20150916.130057!en_us/nav/templates/menu/people.jsp"
+                      href="http://showtime.ontimesuite.com/profiles/"
+                      errormessage="Profiles is not available"><img alt="" role="presentation" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lconnBannerIcon lconnSprite lconnSprite-iconProfilesBlue16">Profiles <img role="presentation" alt="" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerCommunities" class=" "><a id="lotusBannerCommunitiesLink" 
+                      onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                      onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                      onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                      role="button" 
+                      _lconn_menuid="lconnheadermenu-communities"
+                      aria-label="Communities" 
+                      src="/search/static/20150916.130057!en_us/nav/templates/menu/communities.jsp?authenticated=true"
+                      href="http://showtime.ontimesuite.com/communities/"
+                      errormessage="Communities is not available"><img alt="" role="presentation" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lconnBannerIcon lconnSprite lconnSprite-iconCommunitiesBlue16">Communities <img role="presentation" alt="" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerApps" class=" lotusSelected"><a onmouseover="dojo.require('lconn.core.header');lconn.core.header.menuMouseover(this);" 
+                   onclick="dojo.require('lconn.core.header');lconn.core.header.menuClick(this);" 
+                   onfocus="dojo.require('lconn.core.header');lconn.core.header.menuFocus(this);" 
+                   role="button" 
+                   _lconn_menuid="lconnheadermenu-apps"
+                   aria-label="Apps" 
+                   src="/search/static/20150916.130057!en_us/nav/templates/menu/apps.jsp"
+                   href="javascript:;"
+                   errormessage="Search is not available">Apps <img role="presentation" alt="" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lotusArrow lotusDropDownSprite"><span class="lotusAltText">&#9660;</span></a></li><li id="lotusBannerHeaderMetrics" style="display:none" class=""><a href="http://showtime.ontimesuite.com/metrics/">Metrics</a></li><li id="lotusBannerModeration" style="display:none" class=""><a href="http://showtime.ontimesuite.com/moderation/">Moderation</a></li></ul><div class="lotusClear"><!-- IE --></div></div></div>
+</div><div class="lotusTitleBar2"><div class="lotusWrapper"><div class="lotusInner"><h2 class="lotusHeading"><span class="lotusText">Search</span></h2><div id="searchForm"></div></div></div></div></div>
+ 
+<div class="lotusMain"><div class="lotusColLeft" role="complementary" aria-label="Tips"><div class="lotusInfoBox" style="margin-top:0px;"><h3>Tips</h3> 
+<h4>New to Connections?</h4> 
+<ul><li>Looking for content from a specific area? Target your search results by selecting only the applications that interest you.</li><li>Enter one or more keywords to find content that contains that keyword</li></ul></div></div><div class="lotusContent" role="main"><div role="alert" style="display: none" class="lotusMessage2" id="lconnSearchMsgErrorNoScope"><img alt="Error" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lotusIcon lotusIconMsgError"/><span class="lotusAltText">Error:</span><div class="lotusMessageBody">You must specify at least one area to search for content in.</div><a title="Close" role="button" class="lotusDelete" href="javascript:;"><img src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" alt="Close"/><span class="lotusAltText">X</span></a></div><div role="alert" style="display: none" class="lotusMessage2" id="lconnSearchMsgErrorEmptyQuery"><img alt="Error" src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" class="lotusIcon lotusIconMsgError"/><span class="lotusAltText">Error:</span><div class="lotusMessageBody">You must specify at least one keyword, tag, person, title or file name to search for.</div><a title="Close" role="button" class="lotusDelete" href="javascript:;"><img src="http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057" alt="Close"/><span class="lotusAltText">X</span></a></div><div class="lotusHeader lconnSearchHeader"><h1>Advanced Search</h1><div class="lotusDetails"><p>Looking for content from a specific area? Target your search results by selecting only the applications that interest you.</p></div></div><table role="presentation" class="lotusLeft"><tr><td><div class="lconnSearchPageSection"> 
+ 
+<div role="presentation" id="filterComponents"><ul class="lotusInlinelist lotusActions"><li class="lotusFirst" title="Select all the application check boxes" aria-controls="filterComponents"><a role="button" href="javascript:setAllChecked('filterComponents',true)">Select All</a></li><li title="Clear all the application check boxes" aria-controls="filterComponents"><a role="button" href="javascript:setAllChecked('filterComponents',false)">Clear All</a></li></ul> 
+ 
+<div class="lconnSearchColumn lotusLeft"><div id="activities" class="lconnSearchColumnItem"><input id="activities_checkbox" type="checkbox" value="activities" checked="checked"
+class="searchCheckBoxes" name="activities"/><label for="activities_checkbox" class="lconnSearchServiceLabel">Activities</label></div><div id="blogs" class="lconnSearchColumnItem"><input id="blogs_checkbox" type="checkbox" value="blogs" checked="checked"
+class="searchCheckBoxes" name="blogs"/><label for="blogs_checkbox" class="lconnSearchServiceLabel">Blogs</label></div><div id="dogear" class="lconnSearchColumnItem"><input id="dogear_checkbox" type="checkbox" value="dogear" checked="checked"
+class="searchCheckBoxes" name="dogear"/><label for="dogear_checkbox" class="lconnSearchServiceLabel">Bookmarks</label></div><div id="communities" class="lconnSearchColumnItem"><input id="communities_checkbox" type="checkbox" value="communities" checked="checked"
+class="searchCheckBoxes" name="communities"/><label for="communities_checkbox" class="lconnSearchServiceLabel">Communities</label></div><div id="files" class="lconnSearchColumnItem"><input id="files_checkbox" type="checkbox" value="files" checked="checked"
+class="searchCheckBoxes" name="files"/><label for="files_checkbox" class="lconnSearchServiceLabel">Files</label></div></div><div class="lconnSearchColumn" style="margin-left: 225px;"><div id="forums" class="lconnSearchColumnItem"><input id="forums_checkbox" type="checkbox" value="forums" checked="checked"
+class="searchCheckBoxes" name="forums"/><label for="forums_checkbox" class="lconnSearchServiceLabel">Forums</label></div><div id="profiles" class="lconnSearchColumnItem"><input id="profiles_checkbox" type="checkbox" value="profiles" checked="checked"
+class="searchCheckBoxes" name="profiles"/><label for="profiles_checkbox" class="lconnSearchServiceLabel">Profiles</label></div><div id="wikis" class="lconnSearchColumnItem"><input id="wikis_checkbox" type="checkbox" value="wikis" checked="checked"
+class="searchCheckBoxes" name="wikis"/><label for="wikis_checkbox" class="lconnSearchServiceLabel">Wikis</label></div><div id="status_updates" class="lconnSearchColumnItem"><input id="status_updates_checkbox" type="checkbox" value="status_updates" checked="checked"
+class="searchCheckBoxes" name="status_updates"/><label for="status_updates_checkbox" class="lconnSearchServiceLabel">Status Updates</label></div></div><div style="clear: both"></div></div></div><form method="get" action="/search/web/search" class="lotusForm" onsubmit="return validateForm(this);" id="advancedSearchForm1" name="advancedSearchForm1"> 
+<div class="lconnSearchPageSection"><fieldset><legend style="display: none">Filter by visibility</legend><table role="presentation" style="border-spacing:10px; margin-top: 1em;"><tr><td style="padding-right:10px;"><input id="allCheckBox" style="vertical-align:middle;margin-left:2px;margin-right:2px;" type="radio" name="scope" value="allconnections" checked="checked" /><span style="vertical-align:middle;font-weight:bold;"><label for="allCheckBox">Search <strong>ALL</strong> content</label></span></td><td><input id="myCheckBox" style="vertical-align:middle;margin-left:2px;margin-right:2px;" type="radio" name="scope" value="personalOnly"/><span style="vertical-align:middle;font-weight:bold;"><label for="myCheckBox">Search <strong>MY</strong> content</label></span></td></tr></table></fieldset></div> 
+<div><input type="hidden" name="constraint" id="sourceConstraint" value="" autocomplete="off"><input type="hidden" name="scope" id="componentScope" value="" autocomplete="off"><input type="hidden" name="constraint" id="tagConstraint" value="" autocomplete="off"><input type="hidden" name="constraint" id="titleConstraint" value="" autocomplete="off"><input type="hidden" name="constraint" id="personConstraint" value="" autocomplete="off"></div><div id="everythingForm" class="lconnSearchPageSection"><table role="presentation"><tr><td><div class="lconnSearchInputContainer"><label for="advancedQuery">Keywords:</label><div><input type="text" class="lotusText" name="query" id="advancedQuery"/></div><span id="advancedQuery_desc" class="lotusMeta">Enter a keyword to find content that contains that keyword.</span></div></td><td><div class="lconnSearchInputContainer"><label for="tagCatcher">Tags:</label><span dojoType="lconn.core.TypeAheadDataStore" queryParam="tag" url="/search/jsonfba/mytag" jsId="tagStore"></span><div><div dojoType="lconn.core.TypeAhead" minchars="3" hideEmptyResults="true" submitFormOnNonSelectingEnter="true" name="tag" minchars="1" searchDelay="600" multipleValues="false" store="tagStore" id="tagCatcher" class="lotusText" token=","></div></div><span id="tagCatcher_desc" class="lotusMeta">Enter a tag to find content tagged with a specific term.</span></div></td></tr><tr> 
+<td><div class="lconnSearchInputContainer"> 
+<label for="peopleCatcher">Person:</label> 
+ 
+<span dojoType="lconn.core.PeopleFinderDataStore" queryParam="query" url="/search/basic/people/typeahead" jsId="peopleStore"></span> 
+<div> 
+ 
+<div dojoType="lconn.core.PeopleFinderTypeAhead" minchars="2" searchDelay="150" submitFormOnNonSelectingEnter="true" multipleValues="false" store="peopleStore" id="peopleCatcher" class="lotusText" name="nonperson" showHintText="false"></div> 
+ 
+</div><input type="hidden" name="person" id="realPerson" value=""/> 
+<span id="peopleCatcher_desc" class="lotusMeta">Enter a person's name to find their profile and any content that they have authored.</span> 
+</div></td> 
+<td><div class="lconnSearchInputContainer"><label for="titleQuery">Title or File Name:</label><div><input type="text" class="lotusText" name="titleQueryInput" id="titleQuery"/><div><span id="titleQuery_desc" class="lotusMeta">Enter a title, for example, a blog title or wiki title, or a file name.</span></div></td></tr></table></div><div style="padding:10px;"><br><input type="submit" class="lotusBtn lotusBtnSpecial" value="Search"/></div></form></td></tr></table></div></div> 
+ 
+ 
+
+<script type="text/javascript">
+var ibmConfig = {
+   serviceName: "search",
+   proxyURL: "/search/ajaxProxy/",
+   contextRootEnabler: "/search",
+   versionStamp: "20150916.130057"
+};
+var baseProtocol = "http";
+var baseHost = "showtime.ontimesuite.com";
+var basePath = "/connections/resources";
+var needProxy = (baseHost != window.location.host || baseProtocol+":" != window.location.protocol);
+var dojoConfig = djConfig = {
+   async: true,
+   isDebug: false,
+   baseUrl: (needProxy ? (ibmConfig.proxyURL + encodeURIComponent(baseProtocol) + "/" + encodeURIComponent(baseHost)) : (baseProtocol + "://" + baseHost)) + basePath + "/web/dojo/",
+   locale: "en-us",
+   dojoBlankHtmlUrl: "/search/static/20150916.130057/nav/blankIE.html",
+   blankGif: "http://showtime.ontimesuite.com/connections/resources/web/com.ibm.lconn.core.styles.oneui3/images/blank.gif?etag=20150916.130057",
+   useCommentedJson: true,  
+   proxy: "/search/ajaxProxy",
+   localizationComplete: true
+};
+</script>
+<script type="text/javascript">
+var netJazzAjaxConfig = {
+    base: "http://showtime.ontimesuite.com/connections/resources",
+    skipStyles: true,
+    params: "etag=20150916.130057&lang=en&country=US"
+};
+CKEDITOR_BASEPATH = window.CKEDITOR_BASEPATH || "http://showtime.ontimesuite.com/connections/resources/web/com.ibm.oneui.ckeditor/editor/"; 
+</script>
+<script type="text/javascript">djConfig.parseOnLoad=true;
+</script>
+<script type="text/javascript" src="http://showtime.ontimesuite.com/connections/resources/web/_js/?include=dojo.main~&etag=20150916.130057&_proxyURL=http%3A%2F%2Fshowtime.ontimesuite.com%2Fconnections%2Fresources&ss=20150916.130057&lang=en&country=US&variant="></script>
+<script type="text/javascript" src="http://showtime.ontimesuite.com/connections/resources/web/_js/?include=lconn.core.bundle_common~&etag=20150916.130057&exclude=dojo.main~&_proxyURL=http%3A%2F%2Fshowtime.ontimesuite.com%2Fconnections%2Fresources&ss=20150916.130057&lang=en&country=US&variant="></script>
+<script type="text/javascript" src="http://showtime.ontimesuite.com/connections/resources/web/_js/?include=lconn.search.searchApp~&etag=20150916.130057&exclude=dojo.main~lconn.core.bundle_common~&_proxyURL=http%3A%2F%2Fshowtime.ontimesuite.com%2Fconnections%2Fresources&ss=20150916.130057&lang=en&country=US&variant="></script>
+<script type="text/javascript">var openHelpWindow=function(){
+lconn.core.help.launchHelp();
+};
+var openDemoWindow=function(url, /*unused*/width, /*unused*/height) {
+lconn.core.help.launchDemo(url);
+}
+dojo.addOnLoad(function() {
+lconn.core.auth.setAuthCheck(function() { return true; });
+var headerHelpLink=dojo.byId("headerHelpLink");
+if (headerHelpLink){
+dojo.attr(headerHelpLink, "href", "javascript:;");
+dojo.connect(headerHelpLink, "onclick", openHelpWindow);
+}
+/* The logout action is set up in the addOnLoad function so that
+we are guaranteed the authentication JS objects are available. */
+var logoutLink=dojo.byId('logoutLink');
+if (logoutLink) {
+dojo.connect(logoutLink, "onclick", function() {
+var authenticated=lconn.core.auth.isAuthenticated();
+if (authenticated) {
+lconn.core.auth.logout();
+} else {
+lconn.core.auth.login();
+}
+return false;
+});
+}
+});
+</script>
+ 
+<script type="text/javascript">dojo.addOnLoad(function() {
+var bodyElem=document.getElementsByTagName("body")[0];
+if (dojo.hasClass(bodyElem, "dijit_a11y")) {
+dojo.addClass(bodyElem, "lotusImagesOff");
+}
+lconn.search.auth.formBasedUtility.init("/search",null);
+var pTA=dijit.byId("peopleCatcher");
+if(pTA!=null) {
+dojo.connect(pTA, "_handleOnChange", function () {
+var pTATarget=dojo.byId("realPerson");
+var itemSet=pTA.getItem();
+if(itemSet!=null) {
+if(pTATarget!=null) {
+pTATarget.value=itemSet.param;
+if(typeof(itemSet.userid)=="undefined" || itemSet.userid==null){
+pTATarget.value="";
+}
+}
+} else {
+return false;
+}
+});
+dojo.connect(pTA, "onSelect", function() {
+var pTA=dijit.byId("peopleCatcher");
+var pTATarget=dojo.byId("realPerson");
+if(pTATarget.value==""){
+pTA.reset();
+}
+});
+dojo.attr("peopleCatcher", {"aria-describedby":"peopleCatcher_desc"});
+} else {
+var bhcTypeAhead=dojo.byId("bhc_PeopleTypeAhead_0");
+if (bhcTypeAhead) {
+dojo.attr(bhcTypeAhead, {"aria-describedby":"peopleCatcher_desc"});
+}
+}
+dojo.attr("advancedQuery", {"aria-describedby":"advancedQuery_desc"});
+dojo.attr("tagCatcher", {"aria-describedby":"tagCatcher_desc"});
+dojo.attr("titleQuery", {"aria-describedby":"titleQuery_desc"});
+dojo.query("div.lotusMessage2 a.lotusDelete").connect("onclick", function(){
+dojo.style(this.parentNode,"display","none");
+});
+});
+function setPersonIdForQuery(bhcTypeAheadWidget) {
+var personId=bhcTypeAheadWidget.store.getValue(bhcTypeAheadWidget.item, "i", "u_");
+personId=personId.substring(2);
+dojo.attr("realPerson", "value", personId);
+}
+function setAllChecked(/*string*/domNodeId, /*boolean*/isSelectAll){
+var domNode=dojo.byId(domNodeId);
+var checkboxes=dojo.query("input.searchCheckBoxes",domNode);
+dojo.forEach(checkboxes, function(theCheckBox){
+if ((isSelectAll && !theCheckBox.checked) || (!isSelectAll && theCheckBox.checked))
+theCheckBox.click();	
+}, this);
+}
+function validateForm(formElement) {
+function whitespaceonly(/*string*/inputValue) {
+if(!inputValue) {return true;}
+var trimmed=dojo.trim(inputValue);
+return trimmed.length === 0;
+}
+dojo.query("div.lotusMessage2").style("display","none");
+var aSearch=document.advancedSearchForm1.advancedQuery;
+var tSearch=document.advancedSearchForm1.titleQuery;
+var tCatcher=document.advancedSearchForm1.tag;
+var rPerson=document.advancedSearchForm1.person;
+var checkBoxes=dojo.query("input.searchCheckBoxes",dojo.byId("filterComponents"));
+var passed=true;
+if((!aSearch || whitespaceonly(aSearch.value))
+&& (!tCatcher || whitespaceonly(tCatcher.value))
+&& (!rPerson || whitespaceonly(rPerson.value))
+&& (!tSearch || whitespaceonly(tSearch.value))) {
+passed=false;
+dojo.style("lconnSearchMsgErrorEmptyQuery","display","");
+return false;
+}
+var limitString="";
+var tofilter=false;
+var count=0;
+var item;
+var sourceValues=[];
+dojo.forEach(checkBoxes, function(item){
+if(dojo.attr(item, "checked")===true) {
+count++;
+limitString=dojo.attr(item, "value");
+sourceValues.push("Source/"+dojo.attr(item,"value"));
+} else {
+tofilter=true;
+}
+}, this);
+if(count===1) {
+tofilter=false;
+dojo.attr("componentScope", "value", limitString);
+} else if (count===0){
+passed=false;
+dojo.style("lconnSearchMsgErrorNoScope","display","");
+return false;
+}
+if(tofilter===true) {
+var sourceConstraint={
+type: "category",
+values: sourceValues
+};
+dojo.attr("sourceConstraint", "value", dojo.toJson(sourceConstraint));
+}
+if (rPerson && !whitespaceonly(rPerson.value)){
+var personConstraint={
+type: "category",
+values: ["Person/"+encodeURIComponent(rPerson.value)]
+};
+dojo.attr("personConstraint", "value", dojo.toJson(personConstraint));
+dojo.attr(rPerson, "value", "");
+dojo.attr("peopleCatcher", "value", ""); 
+}
+if (tCatcher && !whitespaceonly(tCatcher.value)){
+var tag=tCatcher.value;
+tag=dojo.trim(tag.toLowerCase());
+var tagConstraint;
+if (tag.indexOf("*")!==-1){
+tagConstraint={
+type: "field",
+id: "tag",
+values: [tag],
+exactMatch: false
+};
+} else {
+tagConstraint={
+type: "category",
+values: ["Tag/"+tag]
+};
+}
+dojo.attr("tagConstraint", "value", dojo.toJson(tagConstraint));
+dojo.attr("tagCatcher", "value", "");
+}
+if(tSearch && !whitespaceonly(tSearch.value)) {
+var fieldConstraint={
+type: "field",
+id: "title",
+values: [tSearch.value],
+exactMatch: false
+};
+dojo.attr("titleConstraint", "value", dojo.toJson(fieldConstraint));
+dojo.attr("titleQuery", "value", "");
+}
+if (passed){
+var emptyInputs=dojo.query('input[value=""]', formElement);
+emptyInputs.attr("disabled",true);
+dojo.attr("titleQuery", "disabled", true);
+}
+return passed;
+}
+</script> 
+ 
+
+
+ 
+<div id="lotusFooter" class="lotusFooter" role="contentinfo"><ul><li><a href="http://showtime.ontimesuite.com/homepage/">Home</a></li><li><a href="javascript:;" onclick="javascript:openHelpWindow(); return false;" class="">Help</a></li><li><a href="http://www-10.lotus.com/ldd/lcforum.nsf">IBM Support Forums</a></li> <li><a href="/search/web/jsp/toolsHomepage.jsp" class="">Bookmarking Tools</a></li><li id="lotusBannerFooterMetrics" style="display:none"><a class="lotusMetricsReaderLink" href="http://showtime.ontimesuite.com/metrics/">Server Metrics</a></li><li id="lconnFooterMobile" class="lotusHidden"><a id="lconnMobileRedirectLink" href="javascript:;">Mobile UI</a></li><li><a href="http://www-306.ibm.com/software/lotus/products/connections/">IBM Connections on ibm.com</a></li><li><a href="http://www.lotus.com/ldd/doc/cct/nextgen.nsf/feedback_choice?OpenForm&amp;Context=footer+ventura+NoTitle+4.5">Submit Feedback</a></li></ul><script type="text/javascript">
+(function(){
+   function loadConnectionsLanguageSelector() {
+      try {
+         dojo.require("lconn.core.header");
+         lconn.core.header.enableLanguageSelector("languageSelectorText", {"da":"Dansk","no":"Norsk (\u200fBokm\u00e5l)","en":"English","de":"Deutsch","ja":"\u65e5\u672c\u8a9e","BD":"BD"},
+            "lcLang", "", -1);
+      } catch (e) {
+         console.error(e);
+      }
+   }
+   if (dojo.exists("lconn.core.header") && !dojo.exists("_skipConnectionsLanguageSelector"))
+      dojo.addOnLoad(loadConnectionsLanguageSelector);
+})();
+</script><script type="text/javascript">
+      dojo.require("lconn.core.header.apps");
+      dojo.require("lconn.core.auth");
+
+    </script><script type="text/javascript">
+         dojo.addOnLoad(function(){
+            lconn.core.header.apps.updateLoginRegion();
+            lconn.core.header.apps.updateBannerByRoles();
+         });
+       </script>
+</div>
+ 
+</div></body></html>

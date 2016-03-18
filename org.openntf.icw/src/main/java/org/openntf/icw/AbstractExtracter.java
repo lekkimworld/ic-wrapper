@@ -13,11 +13,6 @@ public abstract class AbstractExtracter {
 	
 	// declarations
 	protected Context ctx = null;
-	protected String lang = null;
-	protected String title = null;
-	protected int height = 20000;
-	protected String template = "/search/web/jsp/advancedSearch.jsp";
-	protected String about = "/{0}/html/aboutView.do";
 	
 	/**
 	 * If you are unsure what {@link AbstractExtracter extracter} to use call this method. This 

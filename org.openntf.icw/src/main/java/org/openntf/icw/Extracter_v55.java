@@ -10,7 +10,7 @@ public class Extracter_v55 extends AbstractExtracter {
 	
 	public String[] extract(MECHANISM mechanism) throws Exception {
 		// compute URL to advanced search and load data
-		String url = MessageFormat.format(IConstants.TEMPLATE_ADVANCEDSEARCH, this.ctx.hostname, this.ctx.contextHomepage, this.ctx.language);
+		String url = MessageFormat.format(IConstants.TEMPLATE_ADVANCEDSEARCH, this.ctx.hostname, this.ctx.contextSearch, this.ctx.language);
 		URL loader = ctx.getURL();
 		final CharSequence data = loader.GET(url, true);
 		
