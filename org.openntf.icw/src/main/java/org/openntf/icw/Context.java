@@ -24,9 +24,15 @@ public class Context implements Serializable {
 	protected String username = null;
 	protected String password = null;
 	protected boolean secure = true;
+	protected boolean debug = false;
 	protected String ltpatoken = null;
 	protected String tokenName = IConstants.TOKENNAME_LTPATOKEN2;
 	protected Proxy proxy = Proxy.NO_PROXY;
+	
+	public Context setDebug(boolean flag) {
+		this.debug = flag;
+		return this;
+	}
 	
 	public Context setReleaseString(String release) {
 		this.releaseString = release;

@@ -22,7 +22,15 @@ public class URL {
 	 * @throws Exception
 	 */
 	public CharSequence GET(String endpoint, boolean auth) throws Exception {
-		java.net.URL url = new java.net.URL(endpoint);
+		String endpointUse = endpoint;
+		if (this.ctx.debug) {
+			if (endpoint.contains("?")) {
+				endpoint += "&debug=true";
+			} else {
+				endpoint += "?debug=true";
+			}
+		}
+		java.net.URL url = new java.net.URL(endpointUse);
 		HttpURLConnection con = (HttpURLConnection)url.openConnection(this.ctx.proxy);
 		if (auth) {
 			con = this.ctx.ensureLtpaToken(con);

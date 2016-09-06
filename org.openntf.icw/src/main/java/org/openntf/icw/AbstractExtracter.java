@@ -6,6 +6,11 @@ public abstract class AbstractExtracter {
 	// enum
 	public enum MECHANISM {
 		/**
+		 * Returns all data only replacing title.
+		 */
+		ALL,
+		LEFT_COLUMN, JSOUP,
+		/**
 		 * Returns data with a single replacement target.
 		 */
 		PURE
@@ -51,12 +56,16 @@ public abstract class AbstractExtracter {
 	}
 	
 	protected String replaceBetween(String data, String start, String end, String replace, boolean excludeStart) {
+		return this.replaceBetween(data, start, end, replace, excludeStart, true);
+	}
+	
+	protected String replaceBetween(String data, String start, String end, String replace, boolean excludeStart, boolean excludeEnd) {
 		int idx1 = data.indexOf(start);
 		if (idx1 < 0) return null;
 		int idx2 = data.indexOf(end, idx1 + start.length());
 		if (idx2 < 0) return null;
 		
-		return data.substring(0, idx1 + (excludeStart ? start.length() : 0)) + data.substring(idx2);
+		return data.substring(0, idx1 + (excludeStart ? start.length() : 0)) + data.substring(idx2 + (excludeEnd ? end.length() : 0));
 	}
 	
 	protected String[] extractBetween(String data, String start, String end, boolean excludeStart, boolean excludeEnd) {

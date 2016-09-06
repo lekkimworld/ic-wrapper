@@ -43,6 +43,7 @@ public class ExtracterServlet extends HttpServlet {
 		Context ctx = new Context();
 		ctx.setTokenName(this.tokenName);
 		ctx.setHostname(this.hostname);
+		ctx.setDebug(req.getParameter("cnxdebug") != null);
 		
 		if (null != req.getCookies()) {
 			// get LTPA token and make sure we have it
@@ -104,25 +105,43 @@ public class ExtracterServlet extends HttpServlet {
 		
 		// get iframe url
 		String reqUrl = req.getParameter("url");
+		reqUrl = "about:blank";
 		
 		// extract
 		String[] result = null;
-		try {
-			result = e.extract(MECHANISM.PURE);
-		} catch (Throwable t) {
-			logger.log(Level.SEVERE, "Unable to extract data based on PURE strategy", t);
-			resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Unable to extract data based on PURE strategy");
-			return;
+		if (null == reqUrl || reqUrl.length() == 0) {
+			try {
+				result = e.extract(MECHANISM.ALL);
+			} catch (Throwable t) {
+				logger.log(Level.SEVERE, "Unable to extract data based on ALL strategy", t);
+				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Unable to extract data based on ALL strategy");
+				return;
+			}
+			
+			StringBuilder b = new StringBuilder();
+			b.append(result[0]).append(this.title).append(result[1]);
+			PrintWriter pwResp = resp.getWriter();
+			pwResp.print(b.toString());
+			
+		} else {
+			try {
+				result = e.extract(MECHANISM.JSOUP);
+				
+			} catch (Throwable t) {
+				logger.log(Level.SEVERE, "Unable to extract data based on PURE strategy", t);
+				resp.sendError(HttpServletResponse.SC_INTERNAL_SERVER_ERROR, "Unable to extract data based on PURE strategy");
+				return;
+			}
+			
+			// build iframe url
+			final String html_iframe = (null == reqUrl || reqUrl.length()==0) ? "No content" : "<iframe id=\"icw_iframe\" src=\"" + reqUrl + "\" height=\"" + reqHeight + "px\" width=\"100%\" style=\"border: 0\" border=\"0\"></iframe>";
+			
+			// build result and send it
+			StringBuilder b = new StringBuilder();
+			b.append(result[0]).append(this.title).append(result[1]);
+			PrintWriter pwResp = resp.getWriter();
+			pwResp.print(b.toString());
 		}
-		
-		// build iframe url
-		final String html_iframe = "<iframe id=\"icw_iframe\" src=\"" + reqUrl + "\" height=\"" + reqHeight + "px\" width=\"100%\" style=\"border: 0\" border=\"0\"></iframe>";
-		
-		// build result and send it
-		StringBuilder b = new StringBuilder();
-		b.append(result[0]).append(this.title).append(result[1]).append(html_iframe).append(result[2]);
-		PrintWriter pwResp = resp.getWriter();
-		pwResp.print(b.toString());
 	}
 	
 	private String getInitParamStr(ServletConfig config, String key, String defaultValue) {
